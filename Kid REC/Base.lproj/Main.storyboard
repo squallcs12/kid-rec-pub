@@ -719,10 +719,10 @@
             </objects>
             <point key="canvasLocation" x="5268" y="1094"/>
         </scene>
-        <!--View Controller-->
+        <!--Finish View Controller-->
         <scene sceneID="RjE-Z8-8dp">
             <objects>
-                <viewController id="V2c-uo-iHr" sceneMemberID="viewController">
+                <viewController id="V2c-uo-iHr" customClass="FinishViewController" customModule="Kid_REC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WeV-bN-C49"/>
                         <viewControllerLayoutGuide type="bottom" id="qbL-IF-hZj"/>
@@ -730,8 +730,91 @@
                     <view key="view" contentMode="scaleToFill" id="ePy-ib-DQi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zM-lI-8G2">
+                                <rect key="frame" x="0.0" y="530" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="0BF-nz-Bz6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="k60-AR-Xed"/>
+                                    <constraint firstAttribute="height" constant="70" id="oyo-85-3kv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="tNe-V5-xTp"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Home"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="k60-AR-Xed"/>
+                                        <exclude reference="tNe-V5-xTp"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="homeClick:" destination="ZJq-nW-tM6" eventType="touchUpInside" id="Fss-Ii-CTo"/>
+                                    <action selector="homeClick:" destination="Qbo-9t-4yS" eventType="touchUpInside" id="ii3-Cy-hdo"/>
+                                    <action selector="homeClick:" destination="N70-fW-kvv" eventType="touchUpInside" id="mK6-SQ-RHe"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jr-js-1lo">
+                                <rect key="frame" x="118" y="164" width="363" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="272" id="MVV-D2-xeK"/>
+                                    <constraint firstAttribute="width" constant="363" id="S9g-M3-d7Q"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinishBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Nv7-wd-PY1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqk-Kk-agc">
+                                <rect key="frame" x="365" y="510" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="9dJ-VV-ijh"/>
+                                    <constraint firstAttribute="height" constant="70" id="tee-9f-bZg"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="VideoStop"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozz-zX-A37">
+                                <rect key="frame" x="165" y="510" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="A1q-Mb-cII"/>
+                                    <constraint firstAttribute="height" constant="70" id="E3v-aQ-VYN"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="VideoPlay"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qbL-IF-hZj" firstAttribute="top" secondItem="ozz-zX-A37" secondAttribute="bottom" constant="20" id="22y-ci-5pB"/>
+                            <constraint firstItem="4jr-js-1lo" firstAttribute="centerY" secondItem="ePy-ib-DQi" secondAttribute="centerY" id="3DM-Vg-Bmp"/>
+                            <constraint firstItem="Nv7-wd-PY1" firstAttribute="top" secondItem="ePy-ib-DQi" secondAttribute="topMargin" id="5dg-63-jOZ"/>
+                            <constraint firstItem="4jr-js-1lo" firstAttribute="centerX" secondItem="ePy-ib-DQi" secondAttribute="centerX" id="CIa-gZ-3XU"/>
+                            <constraint firstItem="9zM-lI-8G2" firstAttribute="leading" secondItem="ePy-ib-DQi" secondAttribute="leadingMargin" constant="-20" id="CdA-qQ-WUd"/>
+                            <constraint firstItem="4jr-js-1lo" firstAttribute="centerY" secondItem="ePy-ib-DQi" secondAttribute="centerY" id="JLt-gd-XZj"/>
+                            <constraint firstItem="Nv7-wd-PY1" firstAttribute="leading" secondItem="ePy-ib-DQi" secondAttribute="leadingMargin" constant="-20" id="MEN-ob-Prq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4jr-js-1lo" secondAttribute="trailing" constant="-20" id="Nhb-lt-8So"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nv7-wd-PY1" secondAttribute="trailing" constant="-20" id="Ukl-0G-LYX"/>
+                            <constraint firstItem="qbL-IF-hZj" firstAttribute="top" secondItem="4jr-js-1lo" secondAttribute="bottom" id="Uye-cQ-6TJ"/>
+                            <constraint firstItem="nqk-Kk-agc" firstAttribute="centerX" secondItem="ePy-ib-DQi" secondAttribute="centerX" constant="100" id="jQb-eS-eKO"/>
+                            <constraint firstItem="qbL-IF-hZj" firstAttribute="top" secondItem="nqk-Kk-agc" secondAttribute="bottom" constant="20" id="rVd-NH-ENZ"/>
+                            <constraint firstItem="4jr-js-1lo" firstAttribute="top" secondItem="ePy-ib-DQi" secondAttribute="topMargin" id="rdy-ed-bAN"/>
+                            <constraint firstItem="qbL-IF-hZj" firstAttribute="top" secondItem="9zM-lI-8G2" secondAttribute="bottom" id="uul-qq-TcT"/>
+                            <constraint firstItem="qbL-IF-hZj" firstAttribute="top" secondItem="Nv7-wd-PY1" secondAttribute="bottom" id="vDY-Wh-OCe"/>
+                            <constraint firstItem="4jr-js-1lo" firstAttribute="leading" secondItem="ePy-ib-DQi" secondAttribute="leadingMargin" constant="-20" id="vix-Ve-lAd"/>
+                            <constraint firstItem="ozz-zX-A37" firstAttribute="centerX" secondItem="ePy-ib-DQi" secondAttribute="centerX" constant="-100" id="wkD-mW-MwR"/>
+                            <constraint firstItem="4jr-js-1lo" firstAttribute="centerX" secondItem="ePy-ib-DQi" secondAttribute="centerX" id="z6T-zN-tzR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CIa-gZ-3XU"/>
+                                <exclude reference="JLt-gd-XZj"/>
+                                <exclude reference="Nhb-lt-8So"/>
+                                <exclude reference="rdy-ed-bAN"/>
+                                <exclude reference="vix-Ve-lAd"/>
+                                <exclude reference="Uye-cQ-6TJ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="videoView" destination="4jr-js-1lo" id="8Mh-oD-ISs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLp-3i-keu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -792,6 +875,7 @@
         <image name="EyesBrown1" width="209" height="22"/>
         <image name="EyesBrown2" width="178" height="24"/>
         <image name="FaceCaptureBackground" width="1136" height="640"/>
+        <image name="FinishBackground" width="1136" height="640"/>
         <image name="Home" width="325" height="303"/>
         <image name="Mouth1" width="94" height="53"/>
         <image name="Mouth2" width="458" height="84"/>
@@ -802,6 +886,8 @@
         <image name="Start" width="383" height="106"/>
         <image name="Stop" width="163" height="159"/>
         <image name="Undo" width="136" height="139"/>
+        <image name="VideoPlay" width="117" height="123"/>
+        <image name="VideoStop" width="114" height="123"/>
         <image name="WrongFace" width="345" height="104"/>
     </resources>
 </document>
