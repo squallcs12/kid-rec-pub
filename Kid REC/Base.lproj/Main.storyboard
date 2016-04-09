@@ -63,8 +63,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAh-Iq-GYI">
-                                <rect key="frame" x="20" y="87" width="86" height="30"/>
-                                <state key="normal" title="Chuyện vui"/>
+                                <rect key="frame" x="41" y="111" width="146" height="104"/>
+                                <state key="normal" title="Chuyện Vui"/>
                                 <connections>
                                     <segue destination="zaG-ym-SGD" kind="show" id="9M1-ZU-ajX"/>
                                 </connections>
@@ -73,6 +73,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chọn câu chuyện" id="rZM-6f-RoW"/>
+                    <connections>
+                        <outlet property="happyStoryButton" destination="BAh-Iq-GYI" id="hSZ-dt-d6q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yd4-QE-WCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -409,7 +412,7 @@
         <!--Quay phim-->
         <scene sceneID="tOd-hq-cS4">
             <objects>
-                <viewController id="Qbo-9t-4yS" sceneMemberID="viewController">
+                <viewController id="Qbo-9t-4yS" customClass="EmotionRecViewController" customModule="Kid_REC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8xL-uS-5cP"/>
                         <viewControllerLayoutGuide type="bottom" id="0Jc-Tu-8im"/>

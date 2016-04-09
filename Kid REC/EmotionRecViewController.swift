@@ -1,5 +1,5 @@
 //
-//  StoryPickViewController.swift
+//  EmotionRecViewController.swift
 //  Kid REC
 //
 //  Created by Hat Dao on 4/9/16.
@@ -7,24 +7,23 @@
 //
 
 import UIKit
+import AVFoundation
 
-class StoryPickViewController: UIViewController {
-
-    @IBOutlet weak var happyStoryButton: UIButton!
+class EmotionRecViewController: UIViewController {
+    
+    var captureSession: AVCaptureSession?
+    var stillImageOutput: AVCaptureStillImageOutput?
+    var previewLayer: AVCaptureVideoPreviewLayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "StoryMap")!)
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        happyStoryButton.setTitle("", forState: .Normal)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
     
 
