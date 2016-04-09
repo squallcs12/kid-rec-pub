@@ -15,6 +15,7 @@
 		D6AEF4701CB8AB3200064F95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6AEF46E1CB8AB3200064F95 /* LaunchScreen.storyboard */; };
 		D6AEF47B1CB8AB3200064F95 /* Kid_RECTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF47A1CB8AB3200064F95 /* Kid_RECTests.swift */; };
 		D6AEF4861CB8AB3200064F95 /* Kid_RECUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4851CB8AB3200064F95 /* Kid_RECUITests.swift */; };
+		D6AEF4941CB8B48F00064F95 /* FaceChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4931CB8B48F00064F95 /* FaceChooseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D6AEF4811CB8AB3200064F95 /* Kid RECUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kid RECUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6AEF4851CB8AB3200064F95 /* Kid_RECUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kid_RECUITests.swift; sourceTree = "<group>"; };
 		D6AEF4871CB8AB3200064F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6AEF4931CB8B48F00064F95 /* FaceChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceChooseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				D6AEF46E1CB8AB3200064F95 /* LaunchScreen.storyboard */,
 				D6AEF4711CB8AB3200064F95 /* Info.plist */,
 				D6AEF4691CB8AB3200064F95 /* Kid_REC.xcdatamodeld */,
+				D6AEF4931CB8B48F00064F95 /* FaceChooseViewController.swift */,
 			);
 			path = "Kid REC";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6AEF4941CB8B48F00064F95 /* FaceChooseViewController.swift in Sources */,
 				D6AEF4651CB8AB3100064F95 /* ViewController.swift in Sources */,
 				D6AEF4631CB8AB3100064F95 /* AppDelegate.swift in Sources */,
 				D6AEF46B1CB8AB3200064F95 /* Kid_REC.xcdatamodeld in Sources */,

@@ -81,7 +81,7 @@
         <!--Chọn mặt vui-->
         <scene sceneID="z2l-3v-AUt">
             <objects>
-                <viewController id="zaG-ym-SGD" sceneMemberID="viewController">
+                <viewController id="zaG-ym-SGD" customClass="FaceChooseViewController" customModule="Kid_REC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nYG-RW-y0L"/>
                         <viewControllerLayoutGuide type="bottom" id="RNb-JB-eSw"/>
@@ -96,7 +96,10 @@
                                     <constraint firstAttribute="height" constant="150" id="BBf-QX-hgU"/>
                                     <constraint firstAttribute="width" constant="150" id="Kjj-dR-of4"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Face1"/>
+                                <connections>
+                                    <action selector="face1Select:" destination="zaG-ym-SGD" eventType="touchUpInside" id="2c5-Qc-JEi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ph-Re-vDk">
                                 <rect key="frame" x="430" y="72" width="150" height="150"/>
@@ -104,7 +107,10 @@
                                     <constraint firstAttribute="height" constant="150" id="M5g-1r-It6"/>
                                     <constraint firstAttribute="width" constant="150" id="xf6-2n-aUM"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Face2"/>
+                                <connections>
+                                    <action selector="face2Select:" destination="zaG-ym-SGD" eventType="touchUpInside" id="sPM-q6-B1G"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StarGray" highlightedImage="Star" translatesAutoresizingMaskIntoConstraints="NO" id="dnn-dQ-xKE">
                                 <rect key="frame" x="270" y="520" width="60" height="60"/>
@@ -138,6 +144,12 @@
                                     <segue destination="ZJq-nW-tM6" kind="show" id="QhX-M4-KsX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bé chọn sai rồi, chọn lại nào" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTQ-Xh-8aw">
+                                <rect key="frame" x="193.5" y="491" width="213" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -148,6 +160,8 @@
                             <constraint firstItem="RNb-JB-eSw" firstAttribute="top" secondItem="8Qk-fv-Byb" secondAttribute="bottom" constant="20" id="PZn-9m-SvG"/>
                             <constraint firstItem="RNb-JB-eSw" firstAttribute="top" secondItem="dnn-dQ-xKE" secondAttribute="bottom" constant="20" id="WRc-6n-8pF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4ph-Re-vDk" secondAttribute="trailing" id="XZj-4L-eH5"/>
+                            <constraint firstItem="GTQ-Xh-8aw" firstAttribute="centerX" secondItem="fEk-Xb-GK7" secondAttribute="centerX" id="ecK-5b-nO1"/>
+                            <constraint firstItem="dnn-dQ-xKE" firstAttribute="top" secondItem="GTQ-Xh-8aw" secondAttribute="bottom" constant="8" id="iMi-To-dXi"/>
                             <constraint firstItem="dnn-dQ-xKE" firstAttribute="centerX" secondItem="fEk-Xb-GK7" secondAttribute="centerX" id="ldA-lZ-svR"/>
                             <constraint firstItem="FWk-x1-n2I" firstAttribute="top" secondItem="nYG-RW-y0L" secondAttribute="bottom" constant="8" id="oeq-bC-JTc"/>
                             <constraint firstItem="4ph-Re-vDk" firstAttribute="top" secondItem="nYG-RW-y0L" secondAttribute="bottom" constant="8" id="pny-Hn-Zmd"/>
@@ -156,6 +170,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chọn mặt vui" id="NaA-ig-e4B"/>
+                    <connections>
+                        <outlet property="face1" destination="FWk-x1-n2I" id="Xsn-x5-Dp2"/>
+                        <outlet property="face2" destination="4ph-Re-vDk" id="bbz-hh-W0X"/>
+                        <outlet property="nextButton" destination="mKE-Oc-BoN" id="uBB-xq-7Ab"/>
+                        <outlet property="star1" destination="hpb-0q-rjp" id="S3b-Qx-YnX"/>
+                        <outlet property="star2" destination="dnn-dQ-xKE" id="rSh-DL-LKY"/>
+                        <outlet property="star3" destination="8Qk-fv-Byb" id="O0o-q5-5a4"/>
+                        <outlet property="wrongLabel" destination="GTQ-Xh-8aw" id="6qR-tl-REn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZe-uy-eOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
