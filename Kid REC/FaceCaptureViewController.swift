@@ -37,9 +37,20 @@ class FaceCaptureViewController: UIViewController {
             if captureSession!.canAddInput(input) {
                 captureSession!.addInput(input)
                 
+                stillImageOutput = AVCaptureStillImageOutput()
+                stillImageOutput!.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG, AV: AVCaptureVideoOrientation.LandscapeLeft]
+                
+                let outputConnection = stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo) as AVCaptureConnection
+                if outputConnection.isVideoOrientationSupported() {
+                    
+                }
+                
+                captureSession!.addOutput(stillImageOutput)
+                
                 previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
                 previewLayer!.frame = previewView.bounds
                 previewView.layer.addSublayer(previewLayer!)
+                
                 
                 captureSession!.startRunning()
 
