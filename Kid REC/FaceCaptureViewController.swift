@@ -11,6 +11,7 @@ import AVFoundation
 
 class FaceCaptureViewController: UIViewController {
     @IBOutlet weak var previewView: UIView!
+    @IBOutlet weak var takePhotoButton: UIButton!
     
     var captureSession: AVCaptureSession?
     var stillImageOutput: AVCaptureStillImageOutput?
@@ -38,16 +39,15 @@ class FaceCaptureViewController: UIViewController {
                 captureSession!.addInput(input)
                 
                 stillImageOutput = AVCaptureStillImageOutput()
-                stillImageOutput!.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG, AV: AVCaptureVideoOrientation.LandscapeLeft]
-                
-                let outputConnection = stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo) as AVCaptureConnection
-                if outputConnection.isVideoOrientationSupported() {
-                    
-                }
+                stillImageOutput!.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
                 
                 captureSession!.addOutput(stillImageOutput)
                 
-                previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+                previewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+                if ((previewLayer!.connection?.supportsVideoOrientation) != nil) {
+                    previewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.LandscapeLeft
+                }
+                
                 previewLayer!.frame = previewView.bounds
                 previewView.layer.addSublayer(previewLayer!)
                 
@@ -66,6 +66,19 @@ class FaceCaptureViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Event listener
+    @IBAction func takePhotoPressed(sender: AnyObject) {
+        if let videoConnection = stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo) {
+            stillImageOutput?.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {
+                sampleBuffer, error in
+                var imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
+                var dataProvider = CGDataProviderCreateWithCFData(imageData)
+                var cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, kCGRenderingIntentDefault)
+                var image = UIImage(CGImage: cgImageRef, scale: 1.0, orientation: UIImageOrientation.Right)
+                
+            })
+        }
+    }
 
     /*
     // MARK: - Navigation
