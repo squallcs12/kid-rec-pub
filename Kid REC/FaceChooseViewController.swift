@@ -34,6 +34,7 @@ class FaceChooseViewController: UIViewController {
         face2.setTitle("", forState: UIControlState.Normal)
         
         wrongLabel.hidden = true
+        nextButton.hidden = true
         
         displayFaces()
     }

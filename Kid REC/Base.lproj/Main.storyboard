@@ -187,7 +187,7 @@
         <!--Ghép mặt vui-->
         <scene sceneID="5QG-dF-3JH">
             <objects>
-                <viewController id="ZJq-nW-tM6" sceneMemberID="viewController">
+                <viewController id="ZJq-nW-tM6" customClass="FacePuzzleViewController" customModule="Kid_REC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xGC-br-mld"/>
                         <viewControllerLayoutGuide type="bottom" id="9aZ-Ae-Orx"/>
@@ -196,37 +196,92 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EyesBrown1" translatesAutoresizingMaskIntoConstraints="NO" id="yb4-Dj-hpU">
-                                <rect key="frame" x="20" y="72" width="154" height="28"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EyesBrown1" translatesAutoresizingMaskIntoConstraints="NO" id="poO-LM-vg4">
+                                <rect key="frame" x="196" y="86" width="209" height="22"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Eyes2" translatesAutoresizingMaskIntoConstraints="NO" id="0ee-Au-OSt">
-                                <rect key="frame" x="40" y="116" width="114" height="48"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Eyes1" translatesAutoresizingMaskIntoConstraints="NO" id="qkO-Cd-rKh">
+                                <rect key="frame" x="224" y="116" width="152" height="51"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mouth2" translatesAutoresizingMaskIntoConstraints="NO" id="CnQ-BS-x4a">
-                                <rect key="frame" x="40" y="180" width="114" height="41"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mouth1" translatesAutoresizingMaskIntoConstraints="NO" id="nTh-5F-9Mb">
+                                <rect key="frame" x="253" y="192" width="94" height="53"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EyesBrown2" translatesAutoresizingMaskIntoConstraints="NO" id="bpA-Ja-gdl">
-                                <rect key="frame" x="466" y="77" width="114" height="50"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Eyes1" translatesAutoresizingMaskIntoConstraints="NO" id="cug-CH-sXg">
-                                <rect key="frame" x="466" y="142" width="114" height="48"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mouth1" translatesAutoresizingMaskIntoConstraints="NO" id="6KV-M4-Qim">
-                                <rect key="frame" x="466" y="204" width="114" height="41"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EyesBrown1" translatesAutoresizingMaskIntoConstraints="NO" id="poO-LM-vg4">
-                                <rect key="frame" x="193" y="116" width="215" height="28"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Eyes1" translatesAutoresizingMaskIntoConstraints="NO" id="qkO-Cd-rKh">
-                                <rect key="frame" x="193" y="152" width="215" height="83"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mouth1" translatesAutoresizingMaskIntoConstraints="NO" id="nTh-5F-9Mb">
-                                <rect key="frame" x="236" y="243" width="129" height="70"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzY-U4-sH9">
+                                <rect key="frame" x="20" y="86" width="92" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NdU-rW-1g3"/>
+                                    <constraint firstAttribute="width" constant="92" id="R3M-lm-8yK"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="EyesBrown2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="874-eA-yIJ">
+                                <rect key="frame" x="20" y="127" width="92" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Cro-dy-7GP"/>
+                                    <constraint firstAttribute="width" constant="92" id="Ezt-r0-650"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Eyes1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAa-NO-zsw">
+                                <rect key="frame" x="20" y="192" width="92" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="0Eg-2g-xlz"/>
+                                    <constraint firstAttribute="height" constant="24" id="PE8-re-xK6"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Mouth2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eC2-9h-Jng">
+                                <rect key="frame" x="446" y="86" width="134" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="9ps-jP-Ckj"/>
+                                    <constraint firstAttribute="height" constant="30" id="Csf-lg-9yN"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="EyesBrown1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sV-ry-rZa">
+                                <rect key="frame" x="446" y="137" width="134" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="duW-L5-IQq"/>
+                                    <constraint firstAttribute="height" constant="42" id="vuS-aQ-EW4"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Eyes2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhC-bw-uTA">
+                                <rect key="frame" x="466" y="187" width="94" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="hGs-98-rHh"/>
+                                    <constraint firstAttribute="height" constant="53" id="wMN-CE-zFG"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Mouth1"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nTh-5F-9Mb" firstAttribute="centerX" secondItem="wOz-PK-rvV" secondAttribute="centerX" id="4og-pB-KPh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PhC-bw-uTA" secondAttribute="trailing" constant="20" id="9Dj-j9-GRp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6sV-ry-rZa" secondAttribute="trailing" id="9Q3-em-ML8"/>
+                            <constraint firstItem="nTh-5F-9Mb" firstAttribute="top" secondItem="qkO-Cd-rKh" secondAttribute="bottom" constant="25" id="Jvp-SJ-ZXM"/>
+                            <constraint firstItem="poO-LM-vg4" firstAttribute="centerX" secondItem="wOz-PK-rvV" secondAttribute="centerX" id="KWd-MH-DpB"/>
+                            <constraint firstItem="eC2-9h-Jng" firstAttribute="top" secondItem="xGC-br-mld" secondAttribute="bottom" constant="22" id="Pgg-tC-akl"/>
+                            <constraint firstItem="SAa-NO-zsw" firstAttribute="top" secondItem="874-eA-yIJ" secondAttribute="bottom" constant="25" id="XjZ-PD-Zlu"/>
+                            <constraint firstItem="qkO-Cd-rKh" firstAttribute="top" secondItem="poO-LM-vg4" secondAttribute="bottom" constant="8" id="YCX-CO-1uH"/>
+                            <constraint firstItem="874-eA-yIJ" firstAttribute="top" secondItem="AzY-U4-sH9" secondAttribute="bottom" constant="20" id="Z9p-PF-jPQ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="874-eA-yIJ" secondAttribute="leading" id="bIc-C7-pdb"/>
+                            <constraint firstItem="6sV-ry-rZa" firstAttribute="top" secondItem="eC2-9h-Jng" secondAttribute="bottom" constant="21" id="dFI-AZ-q5F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eC2-9h-Jng" secondAttribute="trailing" id="eRZ-5W-rZw"/>
+                            <constraint firstItem="poO-LM-vg4" firstAttribute="top" secondItem="xGC-br-mld" secondAttribute="bottom" constant="22" id="eni-J5-ufN"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="AzY-U4-sH9" secondAttribute="leading" id="lhG-Qc-lRX"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="SAa-NO-zsw" secondAttribute="leading" id="ti3-hy-yRy"/>
+                            <constraint firstItem="AzY-U4-sH9" firstAttribute="top" secondItem="xGC-br-mld" secondAttribute="bottom" constant="22" id="x0H-2W-owR"/>
+                            <constraint firstItem="PhC-bw-uTA" firstAttribute="top" secondItem="6sV-ry-rZa" secondAttribute="bottom" constant="8" symbolic="YES" id="xwz-9O-EzB"/>
+                            <constraint firstItem="qkO-Cd-rKh" firstAttribute="centerX" secondItem="wOz-PK-rvV" secondAttribute="centerX" id="yTr-IM-27R"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ghép mặt vui" id="dKi-vJ-n6I"/>
+                    <connections>
+                        <outlet property="eyeBrown" destination="poO-LM-vg4" id="LrE-c4-fJC"/>
+                        <outlet property="eyes" destination="qkO-Cd-rKh" id="5Nf-OG-Wdk"/>
+                        <outlet property="mouth" destination="nTh-5F-9Mb" id="KxQ-84-CH5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVM-s2-awW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
