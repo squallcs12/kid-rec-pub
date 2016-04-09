@@ -27,6 +27,7 @@
 		D6AEF4AB1CB9669A00064F95 /* ParentsCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4AA1CB9669A00064F95 /* ParentsCallViewController.swift */; };
 		D6AEF4AD1CB96D2D00064F95 /* ParentsGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4AC1CB96D2D00064F95 /* ParentsGuideViewController.swift */; };
 		D6AEF4AF1CB9AA7900064F95 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4AE1CB9AA7900064F95 /* FinishViewController.swift */; };
+		D6AEF4B11CB9BAA500064F95 /* AcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4B01CB9BAA500064F95 /* AcceptViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		D6AEF4AA1CB9669A00064F95 /* ParentsCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentsCallViewController.swift; sourceTree = "<group>"; };
 		D6AEF4AC1CB96D2D00064F95 /* ParentsGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentsGuideViewController.swift; sourceTree = "<group>"; };
 		D6AEF4AE1CB9AA7900064F95 /* FinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		D6AEF4B01CB9BAA500064F95 /* AcceptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				D6AEF4AA1CB9669A00064F95 /* ParentsCallViewController.swift */,
 				D6AEF4AC1CB96D2D00064F95 /* ParentsGuideViewController.swift */,
 				D6AEF4AE1CB9AA7900064F95 /* FinishViewController.swift */,
+				D6AEF4B01CB9BAA500064F95 /* AcceptViewController.swift */,
 			);
 			path = "Kid REC";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6AEF4A61CB9185700064F95 /* LoginViewController.swift in Sources */,
+				D6AEF4B11CB9BAA500064F95 /* AcceptViewController.swift in Sources */,
 				D6AEF4AD1CB96D2D00064F95 /* ParentsGuideViewController.swift in Sources */,
 				D6AEF4941CB8B48F00064F95 /* FaceChooseViewController.swift in Sources */,
 				D6AEF4AB1CB9669A00064F95 /* ParentsCallViewController.swift in Sources */,

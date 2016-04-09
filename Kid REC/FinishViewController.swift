@@ -12,6 +12,8 @@ import AVFoundation
 class FinishViewController: UIViewController {
     
     @IBOutlet weak var videoView: UIView!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
 
     var videoFileURL: NSURL?
     
@@ -23,6 +25,9 @@ class FinishViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        stopButton.setBackgroundImage(UIImage(named: "VideoStop"), forState: .Highlighted)
+        
         if videoFileURL != nil {
             let playerItem = AVPlayerItem(URL: videoFileURL!)
             
@@ -34,7 +39,14 @@ class FinishViewController: UIViewController {
             self.videoPlayer!.play()
             
             self.videoView.layer.addSublayer(self.playerLayer!)
+            
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(playerDidReachEnd), name: AVPlayerItemDidPlayToEndTimeNotification, object:nil)
+
         }
+    }
+    
+    func playerDidReachEnd(notification: NSNotification) {
+        stopPlayVideo()
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +57,37 @@ class FinishViewController: UIViewController {
     func setVideoURL(fileURL: NSURL) {
         videoFileURL = fileURL
     }
+    
+    // MARK: - event listener
+    
+    var isPlaying = true
+    @IBAction func pausePressed(sender: AnyObject) {
+        if (isPlaying) {
+            self.videoPlayer.pause()
+            playButton.setBackgroundImage(UIImage(named: "VideoPlay"), forState: .Normal)
+        } else {
+            self.videoPlayer.play()
+            playButton.setBackgroundImage(UIImage(named: "VideoPause"), forState: .Normal)
+        }
+        isPlaying = !isPlaying
+    }
+    
+    @IBAction func stopPressed(sender: AnyObject) {
+        stopPlayVideo()
+    }
+    @IBAction func homeClick(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
+    func stopPlayVideo () {
+        self.videoPlayer.pause()
+        
+        self.videoPlayer.seekToTime(kCMTimeZero)
+        
+        isPlaying = false
+        playButton.setBackgroundImage(UIImage(named: "VideoPlay"), forState: .Normal)
+    }
+    
 
     /*
     // MARK: - Navigation

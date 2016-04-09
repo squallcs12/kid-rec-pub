@@ -712,12 +712,56 @@
                         <outlet property="recordButton" destination="rwv-Cs-7hJ" id="3vK-FV-OZj"/>
                         <outlet property="stopButton" destination="b31-8e-TwW" id="r3M-ea-b5C"/>
                         <outlet property="undoButton" destination="ePS-Zf-Vmi" id="w7E-mV-Rh9"/>
-                        <segue destination="V2c-uo-iHr" kind="show" identifier="jumpToViewVideo" id="uY5-6a-i7q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ct4-Fv-CjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5268" y="1094"/>
+        </scene>
+        <!--Accept View Controller-->
+        <scene sceneID="lAz-RY-ibL">
+            <objects>
+                <viewController id="dCv-nc-Iah" customClass="AcceptViewController" customModule="Kid_REC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6RI-ZL-07R"/>
+                        <viewControllerLayoutGuide type="bottom" id="H8K-gl-7dA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2EU-Ub-ZCH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKT-93-6ue">
+                                <rect key="frame" x="0.0" y="530" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="3hB-2p-VK1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Cyy-UB-QBi"/>
+                                    <constraint firstAttribute="width" constant="70" id="OW1-g6-9R1"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="wBh-aj-U8n"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Home"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wBh-aj-U8n"/>
+                                        <exclude reference="Cyy-UB-QBi"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="homeClick:" destination="Qbo-9t-4yS" eventType="touchUpInside" id="3iu-Dr-6gI"/>
+                                    <action selector="homeClick:" destination="ZJq-nW-tM6" eventType="touchUpInside" id="iYo-B6-PvA"/>
+                                    <action selector="homeClick:" destination="N70-fW-kvv" eventType="touchUpInside" id="jru-k3-qH4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H8K-gl-7dA" firstAttribute="top" secondItem="dKT-93-6ue" secondAttribute="bottom" id="OUs-PZ-1bp"/>
+                            <constraint firstItem="dKT-93-6ue" firstAttribute="leading" secondItem="2EU-Ub-ZCH" secondAttribute="leadingMargin" constant="-20" id="UHQ-DL-pNR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CmT-wX-5mM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5918" y="1093"/>
         </scene>
         <!--Finish View Controller-->
         <scene sceneID="RjE-Z8-8dp">
@@ -764,20 +808,48 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqk-Kk-agc">
-                                <rect key="frame" x="365" y="510" width="70" height="70"/>
+                                <rect key="frame" x="315" y="510" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="9dJ-VV-ijh"/>
                                     <constraint firstAttribute="height" constant="70" id="tee-9f-bZg"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="VideoStop"/>
+                                <connections>
+                                    <action selector="stopPressed:" destination="V2c-uo-iHr" eventType="touchUpInside" id="Zl5-3S-Iba"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozz-zX-A37">
-                                <rect key="frame" x="165" y="510" width="70" height="70"/>
+                                <rect key="frame" x="215" y="510" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="A1q-Mb-cII"/>
                                     <constraint firstAttribute="height" constant="70" id="E3v-aQ-VYN"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="VideoPlay"/>
+                                <state key="normal" backgroundImage="VideoPause"/>
+                                <connections>
+                                    <action selector="pausePressed:" destination="V2c-uo-iHr" eventType="touchUpInside" id="cWk-UQ-EeW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rel-mc-vBb">
+                                <rect key="frame" x="0.0" y="530" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="R5S-tT-sIi"/>
+                                    <constraint firstAttribute="width" constant="70" id="SS0-ga-JN7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Y8d-Ol-Qr5"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="pFn-fV-u42"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Home"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pFn-fV-u42"/>
+                                        <exclude reference="Y8d-Ol-Qr5"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="homeClick:" destination="ZJq-nW-tM6" eventType="touchUpInside" id="NHh-VP-mPh"/>
+                                    <action selector="homeClick:" destination="N70-fW-kvv" eventType="touchUpInside" id="WBQ-tF-JXI"/>
+                                    <action selector="homeClick:" destination="Qbo-9t-4yS" eventType="touchUpInside" id="b4s-fg-RUn"/>
+                                    <action selector="homeClick:" destination="V2c-uo-iHr" eventType="touchUpInside" id="kRU-0h-gOT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -790,16 +862,20 @@
                             <constraint firstItem="4jr-js-1lo" firstAttribute="centerY" secondItem="ePy-ib-DQi" secondAttribute="centerY" id="JLt-gd-XZj"/>
                             <constraint firstItem="Nv7-wd-PY1" firstAttribute="leading" secondItem="ePy-ib-DQi" secondAttribute="leadingMargin" constant="-20" id="MEN-ob-Prq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4jr-js-1lo" secondAttribute="trailing" constant="-20" id="Nhb-lt-8So"/>
+                            <constraint firstItem="9zM-lI-8G2" firstAttribute="leading" secondItem="ePy-ib-DQi" secondAttribute="leadingMargin" constant="-20" id="QII-Ef-QRL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nv7-wd-PY1" secondAttribute="trailing" constant="-20" id="Ukl-0G-LYX"/>
                             <constraint firstItem="qbL-IF-hZj" firstAttribute="top" secondItem="4jr-js-1lo" secondAttribute="bottom" id="Uye-cQ-6TJ"/>
-                            <constraint firstItem="nqk-Kk-agc" firstAttribute="centerX" secondItem="ePy-ib-DQi" secondAttribute="centerX" constant="100" id="jQb-eS-eKO"/>
+                            <constraint firstItem="nqk-Kk-agc" firstAttribute="centerX" secondItem="ePy-ib-DQi" secondAttribute="centerX" constant="50" id="jQb-eS-eKO"/>
+                            <constraint firstItem="qbL-IF-hZj" firstAttribute="top" secondItem="9zM-lI-8G2" secondAttribute="bottom" id="kzK-eI-YSr"/>
                             <constraint firstItem="qbL-IF-hZj" firstAttribute="top" secondItem="nqk-Kk-agc" secondAttribute="bottom" constant="20" id="rVd-NH-ENZ"/>
                             <constraint firstItem="4jr-js-1lo" firstAttribute="top" secondItem="ePy-ib-DQi" secondAttribute="topMargin" id="rdy-ed-bAN"/>
+                            <constraint firstItem="Rel-mc-vBb" firstAttribute="leading" secondItem="ePy-ib-DQi" secondAttribute="leadingMargin" constant="-20" id="uIN-Yi-tBH"/>
                             <constraint firstItem="qbL-IF-hZj" firstAttribute="top" secondItem="9zM-lI-8G2" secondAttribute="bottom" id="uul-qq-TcT"/>
                             <constraint firstItem="qbL-IF-hZj" firstAttribute="top" secondItem="Nv7-wd-PY1" secondAttribute="bottom" id="vDY-Wh-OCe"/>
                             <constraint firstItem="4jr-js-1lo" firstAttribute="leading" secondItem="ePy-ib-DQi" secondAttribute="leadingMargin" constant="-20" id="vix-Ve-lAd"/>
-                            <constraint firstItem="ozz-zX-A37" firstAttribute="centerX" secondItem="ePy-ib-DQi" secondAttribute="centerX" constant="-100" id="wkD-mW-MwR"/>
+                            <constraint firstItem="ozz-zX-A37" firstAttribute="centerX" secondItem="ePy-ib-DQi" secondAttribute="centerX" constant="-50" id="wkD-mW-MwR"/>
                             <constraint firstItem="4jr-js-1lo" firstAttribute="centerX" secondItem="ePy-ib-DQi" secondAttribute="centerX" id="z6T-zN-tzR"/>
+                            <constraint firstItem="qbL-IF-hZj" firstAttribute="top" secondItem="Rel-mc-vBb" secondAttribute="bottom" id="zOE-uH-m6z"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -813,12 +889,14 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="playButton" destination="ozz-zX-A37" id="Osi-sE-8hb"/>
+                        <outlet property="stopButton" destination="nqk-Kk-agc" id="zjC-TC-Fk6"/>
                         <outlet property="videoView" destination="4jr-js-1lo" id="8Mh-oD-ISs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLp-3i-keu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5936" y="1094"/>
+            <point key="canvasLocation" x="6561" y="1094"/>
         </scene>
         <!--Login-->
         <scene sceneID="pYp-ZY-Jly">
@@ -886,7 +964,7 @@
         <image name="Start" width="383" height="106"/>
         <image name="Stop" width="163" height="159"/>
         <image name="Undo" width="136" height="139"/>
-        <image name="VideoPlay" width="117" height="123"/>
+        <image name="VideoPause" width="117" height="123"/>
         <image name="VideoStop" width="114" height="123"/>
         <image name="WrongFace" width="345" height="104"/>
     </resources>
