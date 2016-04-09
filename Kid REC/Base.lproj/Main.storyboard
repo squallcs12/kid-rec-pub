@@ -232,6 +232,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fJZ-8b-nqV">
+                                <rect key="frame" x="380" y="72" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="I9d-7J-t3i"/>
+                                    <constraint firstAttribute="width" constant="200" id="fTE-wX-mCs"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paM-gf-6ap">
                                 <rect key="frame" x="250" y="550" width="100" height="30"/>
                                 <constraints>
@@ -268,11 +275,14 @@
                             <constraint firstItem="Fjz-Pf-w2B" firstAttribute="top" secondItem="hag-2i-R5E" secondAttribute="bottom" constant="8" id="WqR-5a-rl2"/>
                             <constraint firstItem="paM-gf-6ap" firstAttribute="centerX" secondItem="Ixc-SN-BPr" secondAttribute="centerX" id="X2l-7l-qyi"/>
                             <constraint firstItem="P3P-90-OCk" firstAttribute="top" secondItem="HzX-hj-HQU" secondAttribute="bottom" constant="20" id="eMI-SA-XvJ"/>
+                            <constraint firstItem="fJZ-8b-nqV" firstAttribute="top" secondItem="hag-2i-R5E" secondAttribute="bottom" constant="8" id="pN8-zN-Lgd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fjz-Pf-w2B" secondAttribute="trailing" id="sXg-TT-hf7"/>
+                            <constraint firstItem="fJZ-8b-nqV" firstAttribute="trailing" secondItem="Ixc-SN-BPr" secondAttribute="trailingMargin" id="zf6-hq-9xs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chụp mặt cười" id="Xjx-Yn-Glp"/>
                     <connections>
+                        <outlet property="capturedImage" destination="fJZ-8b-nqV" id="UfS-0b-bXY"/>
                         <outlet property="previewView" destination="Fjz-Pf-w2B" id="sjP-Ko-naj"/>
                         <outlet property="takePhotoButton" destination="HzX-hj-HQU" id="yGY-1P-oeg"/>
                     </connections>
