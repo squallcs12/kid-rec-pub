@@ -8,12 +8,16 @@
 
 import UIKit
 
-class ParentsTutorialViewController: UIViewController {
+class ParentsGuideViewController: UIViewController {
+    @IBOutlet weak var startButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "ParentsGuideBackground")!)
+        
+        startButton.setBackgroundImage(UIImage(named: "StartPressed"), forState: .Highlighted)
     }
 
     override func didReceiveMemoryWarning() {

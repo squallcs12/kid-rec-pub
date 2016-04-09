@@ -20,6 +20,7 @@ class EmoticonRecViewController: UIViewController, AVCaptureVideoDataOutputSampl
     @IBOutlet weak var previewView: UIView!
     
     @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     
@@ -30,6 +31,7 @@ class EmoticonRecViewController: UIViewController, AVCaptureVideoDataOutputSampl
     var stillMovieOutput: AVCaptureMovieFileOutput?
     var previewLayer: AVCaptureVideoPreviewLayer?
     
+    var videoFileURL: NSURL!
     
     var choosenPhotos = [UIImage]()
     var outputSize = CGSizeMake(1280, 720)
@@ -42,6 +44,7 @@ class EmoticonRecViewController: UIViewController, AVCaptureVideoDataOutputSampl
         
         undoButton.hidden = true
         doneButton.hidden = true
+        stopButton.hidden = true
         
         undoButton.setBackgroundImage(UIImage(named: "UndoPressed"), forState: .Highlighted)
         doneButton.setBackgroundImage(UIImage(named: "DonePressed"), forState: .Highlighted)
@@ -69,6 +72,22 @@ class EmoticonRecViewController: UIViewController, AVCaptureVideoDataOutputSampl
             
             if captureSession!.canAddInput(input) {
                 captureSession!.addInput(input)
+                
+                
+                stillMovieOutput = AVCaptureMovieFileOutput()
+                stillMovieOutput?.maxRecordedDuration = CMTimeMake(180, 24)
+                
+                captureSession!.beginConfiguration()
+                captureSession!.addOutput(stillMovieOutput)
+                
+                
+                let connection = stillMovieOutput?.connectionWithMediaType(AVMediaTypeVideo)
+                if ( connection!.activeVideoStabilizationMode != AVCaptureVideoStabilizationMode.Auto ) {
+                    connection!.preferredVideoStabilizationMode = AVCaptureVideoStabilizationMode.Auto
+                }
+                connection!.videoOrientation = AVCaptureVideoOrientation.LandscapeLeft
+                captureSession!.commitConfiguration()
+
 
                 previewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
                 if ((previewLayer!.connection?.supportsVideoOrientation) != nil) {
@@ -84,32 +103,6 @@ class EmoticonRecViewController: UIViewController, AVCaptureVideoDataOutputSampl
             
         }
     }
-    
-//    func imageFromSampleBuffer(sampleBuffer :CMSampleBufferRef) -> UIImage {
-//        let imageBuffer: CVImageBufferRef = CMSampleBufferGetImageBuffer(sampleBuffer)!
-//        CVPixelBufferLockBaseAddress(imageBuffer, 0)
-//        let baseAddress: UnsafeMutablePointer<Void> = CVPixelBufferGetBaseAddressOfPlane(imageBuffer, Int(0))
-//        
-//        let bytesPerRow: Int = CVPixelBufferGetBytesPerRow(imageBuffer)
-//        let width: Int = CVPixelBufferGetWidth(imageBuffer)
-//        let height: Int = CVPixelBufferGetHeight(imageBuffer)
-//        
-//        let colorSpace: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()!
-//        
-//        let bitsPerCompornent: Int = 8
-//        let bitmapInfo = CGBitmapInfo(rawValue: (CGBitmapInfo.ByteOrder32Little.rawValue | CGImageAlphaInfo.PremultipliedFirst.rawValue) as UInt32) as! UInt32
-//        let newContext: CGContextRef = CGBitmapContextCreate(baseAddress, width, height, bitsPerCompornent, bytesPerRow, colorSpace, bitmapInfo)! as CGContextRef
-//        
-//        let imageRef: CGImageRef = CGBitmapContextCreateImage(newContext)!
-//        let resultImage = UIImage(CGImage: imageRef)
-//        return resultImage
-//    }
-    
-//    func captureOutput(captureOutput: AVCaptureOutput!, didDropSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {
-//        let image = imageFromSampleBuffer(sampleBuffer) as! UIImage
-//        
-//        choosenPhotos.append(image)
-//    }
     
     var image: UIImage!
     var assetCollection: PHAssetCollection!
@@ -174,26 +167,11 @@ class EmoticonRecViewController: UIViewController, AVCaptureVideoDataOutputSampl
         if error != nil {
             return
         }
-        
-        saveVideo(outputFileURL)
+        videoFileURL = outputFileURL
     }
     
     func startRecording () {
         isRecording = true
-        
-        stillMovieOutput = AVCaptureMovieFileOutput()
-        stillMovieOutput?.maxRecordedDuration = CMTimeMake(180, 24)
-        
-        captureSession!.beginConfiguration()
-        captureSession!.addOutput(stillMovieOutput)
-        
-        
-        let connection = stillMovieOutput?.connectionWithMediaType(AVMediaTypeVideo)
-        if ( connection!.activeVideoStabilizationMode != AVCaptureVideoStabilizationMode.Auto ) {
-            connection!.preferredVideoStabilizationMode = AVCaptureVideoStabilizationMode.Auto
-        }
-        captureSession!.commitConfiguration()
-
 
         let filename = NSProcessInfo.processInfo().globallyUniqueString
         let outputFilePath = NSTemporaryDirectory().stringByAppendingString("\(filename).mov")
@@ -214,25 +192,36 @@ class EmoticonRecViewController: UIViewController, AVCaptureVideoDataOutputSampl
     }
 
     @IBAction func recordPressed(sender: AnyObject) {
-        if (isRecording) {
-            stopRecording()
-        } else {
-            startRecording()
-        }
+        startRecording()
         
         undoButton.hidden = true
         doneButton.hidden = true
+        recordButton.hidden = true
+        stopButton.hidden = false
 //
 //        let queue = dispatch_queue_create("VideoRecord", nil)
 //        stillMovieOutput?.setSampleBufferDelegate(self, queue: queue)
     }
 
+    @IBAction func stopPressed(sender: AnyObject) {
+        stopRecording()
+        
+        undoButton.hidden = false
+        doneButton.hidden = false
+        recordButton.hidden = true
+        stopButton.hidden = true
+    }
+    
     @IBAction func undoPressed(sender: AnyObject) {
         recordButton.hidden = false
         doneButton.hidden = true
         undoButton.hidden = true
     }
 
+    @IBAction func donePressed(sender: AnyObject) {
+        saveVideo(videoFileURL)
+        performSegueWithIdentifier("jumpToViewVideo", sender: self)
+    }
     /*
     // MARK: - Navigation
 
