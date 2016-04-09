@@ -196,23 +196,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCj-ZE-a5H">
-                                <rect key="frame" x="200" y="120" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="JWn-dQ-tjV"/>
-                                    <constraint firstAttribute="height" constant="200" id="ZYR-WI-BqN"/>
-                                </constraints>
-                                <state key="normal" title="Face"/>
-                                <connections>
-                                    <segue destination="N70-fW-kvv" kind="show" id="Srp-XT-2Wy"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EyesBrown1" translatesAutoresizingMaskIntoConstraints="NO" id="yb4-Dj-hpU">
+                                <rect key="frame" x="20" y="72" width="154" height="28"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Eyes2" translatesAutoresizingMaskIntoConstraints="NO" id="0ee-Au-OSt">
+                                <rect key="frame" x="40" y="116" width="114" height="48"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mouth2" translatesAutoresizingMaskIntoConstraints="NO" id="CnQ-BS-x4a">
+                                <rect key="frame" x="40" y="180" width="114" height="41"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EyesBrown2" translatesAutoresizingMaskIntoConstraints="NO" id="bpA-Ja-gdl">
+                                <rect key="frame" x="466" y="77" width="114" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Eyes1" translatesAutoresizingMaskIntoConstraints="NO" id="cug-CH-sXg">
+                                <rect key="frame" x="466" y="142" width="114" height="48"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mouth1" translatesAutoresizingMaskIntoConstraints="NO" id="6KV-M4-Qim">
+                                <rect key="frame" x="466" y="204" width="114" height="41"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EyesBrown1" translatesAutoresizingMaskIntoConstraints="NO" id="poO-LM-vg4">
+                                <rect key="frame" x="193" y="116" width="215" height="28"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Eyes1" translatesAutoresizingMaskIntoConstraints="NO" id="qkO-Cd-rKh">
+                                <rect key="frame" x="193" y="152" width="215" height="83"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mouth1" translatesAutoresizingMaskIntoConstraints="NO" id="nTh-5F-9Mb">
+                                <rect key="frame" x="236" y="243" width="129" height="70"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="wCj-ZE-a5H" firstAttribute="centerX" secondItem="wOz-PK-rvV" secondAttribute="centerX" id="0pg-D6-i7a"/>
-                            <constraint firstItem="wCj-ZE-a5H" firstAttribute="top" secondItem="xGC-br-mld" secondAttribute="bottom" constant="56" id="7Wg-5M-BDO"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ghép mặt vui" id="dKi-vJ-n6I"/>
                 </viewController>
@@ -331,6 +343,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Eyes1" width="152" height="51"/>
+        <image name="Eyes2" width="677" height="268"/>
+        <image name="EyesBrown1" width="209" height="22"/>
+        <image name="EyesBrown2" width="178" height="24"/>
+        <image name="Mouth1" width="94" height="53"/>
+        <image name="Mouth2" width="458" height="84"/>
         <image name="PhotoIcon" width="128" height="128"/>
         <image name="Star" width="512" height="512"/>
         <image name="StarGray" width="512" height="512"/>
