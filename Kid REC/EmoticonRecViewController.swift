@@ -11,6 +11,8 @@ import AVFoundation
 
 class EmoticonRecViewController: UIViewController {
     
+    @IBOutlet weak var previewView: UIView!
+    
     var captureSession: AVCaptureSession?
     var stillImageOutput: AVCaptureStillImageOutput?
     var previewLayer: AVCaptureVideoPreviewLayer?
@@ -19,8 +21,6 @@ class EmoticonRecViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "EmoticonRecBackground")!)
-        
         prepareCamera()
     }
 
@@ -57,8 +57,8 @@ class EmoticonRecViewController: UIViewController {
                     previewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.LandscapeLeft
                 }
                 
-                previewLayer!.frame = self.view.bounds
-                self.view.layer.addSublayer(previewLayer!)
+                previewLayer!.frame = previewView.bounds
+                previewView.layer.addSublayer(previewLayer!)
                 
             }
         }

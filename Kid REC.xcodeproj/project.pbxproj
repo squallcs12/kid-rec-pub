@@ -24,6 +24,8 @@
 		D6AEF4A41CB9177700064F95 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AEF4A31CB9177700064F95 /* FBSDKLoginKit.framework */; };
 		D6AEF4A61CB9185700064F95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4A51CB9185700064F95 /* LoginViewController.swift */; };
 		D6AEF4A91CB91A2C00064F95 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AEF4A81CB91A2C00064F95 /* FBSDKCoreKit.framework */; };
+		D6AEF4AB1CB9669A00064F95 /* ParentsCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4AA1CB9669A00064F95 /* ParentsCallViewController.swift */; };
+		D6AEF4AD1CB96D2D00064F95 /* ParentsTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4AC1CB96D2D00064F95 /* ParentsTutorialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		D6AEF4A51CB9185700064F95 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D6AEF4A71CB9192600064F95 /* BridingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridingHeader.h; sourceTree = "<group>"; };
 		D6AEF4A81CB91A2C00064F95 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20160316/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		D6AEF4AA1CB9669A00064F95 /* ParentsCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentsCallViewController.swift; sourceTree = "<group>"; };
+		D6AEF4AC1CB96D2D00064F95 /* ParentsTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentsTutorialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 				D6AEF49B1CB8F90500064F95 /* EmoticonRecViewController.swift */,
 				D6AEF4A51CB9185700064F95 /* LoginViewController.swift */,
 				D6AEF4A71CB9192600064F95 /* BridingHeader.h */,
+				D6AEF4AA1CB9669A00064F95 /* ParentsCallViewController.swift */,
+				D6AEF4AC1CB96D2D00064F95 /* ParentsTutorialViewController.swift */,
 			);
 			path = "Kid REC";
 			sourceTree = "<group>";
@@ -292,7 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6AEF4A61CB9185700064F95 /* LoginViewController.swift in Sources */,
+				D6AEF4AD1CB96D2D00064F95 /* ParentsTutorialViewController.swift in Sources */,
 				D6AEF4941CB8B48F00064F95 /* FaceChooseViewController.swift in Sources */,
+				D6AEF4AB1CB9669A00064F95 /* ParentsCallViewController.swift in Sources */,
 				D6AEF4961CB8BB4500064F95 /* FaceCaptureViewController.swift in Sources */,
 				D6AEF49A1CB8F23D00064F95 /* StoryPickViewController.swift in Sources */,
 				D6AEF4651CB8AB3100064F95 /* ViewController.swift in Sources */,
