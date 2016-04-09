@@ -626,6 +626,9 @@
                                     <constraint firstAttribute="width" constant="70" id="p3g-Be-yKK"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Record"/>
+                                <connections>
+                                    <action selector="recordPressed:" destination="Qbo-9t-4yS" eventType="touchUpInside" id="3pY-02-hZb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibz-57-kPl">
                                 <rect key="frame" x="355" y="510" width="70" height="70"/>
@@ -633,7 +636,7 @@
                                     <constraint firstAttribute="height" constant="70" id="29s-Sg-WTj"/>
                                     <constraint firstAttribute="width" constant="70" id="8KX-bD-B3Z"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="DonePressed"/>
+                                <state key="normal" backgroundImage="Done"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePS-Zf-Vmi">
                                 <rect key="frame" x="175" y="510" width="70" height="70"/>
@@ -641,7 +644,10 @@
                                     <constraint firstAttribute="height" constant="70" id="AzR-YS-6KJ"/>
                                     <constraint firstAttribute="width" constant="70" id="o6E-83-5Fj"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="UndoPressed"/>
+                                <state key="normal" backgroundImage="Undo"/>
+                                <connections>
+                                    <action selector="undoPressed:" destination="Qbo-9t-4yS" eventType="touchUpInside" id="6Xa-BP-YA9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -678,7 +684,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Quay phim" id="tA7-fF-YFu"/>
                     <connections>
+                        <outlet property="doneButton" destination="ibz-57-kPl" id="qvD-In-lMf"/>
                         <outlet property="previewView" destination="LqH-iC-xbN" id="p9v-Cz-owD"/>
+                        <outlet property="recordButton" destination="rwv-Cs-7hJ" id="3vK-FV-OZj"/>
+                        <outlet property="undoButton" destination="ePS-Zf-Vmi" id="w7E-mV-Rh9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ct4-Fv-CjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -733,7 +742,7 @@
     </scenes>
     <resources>
         <image name="Camera" width="177" height="182"/>
-        <image name="DonePressed" width="128" height="129"/>
+        <image name="Done" width="131" height="126"/>
         <image name="EmoticonRecBackground" width="1136" height="640"/>
         <image name="Eyes1" width="152" height="51"/>
         <image name="Eyes2" width="134" height="72"/>
@@ -747,7 +756,7 @@
         <image name="ParentsCallButton" width="441" height="141"/>
         <image name="Record" width="155" height="162"/>
         <image name="RightFace" width="345" height="95"/>
-        <image name="UndoPressed" width="132" height="136"/>
+        <image name="Undo" width="136" height="139"/>
         <image name="WrongFace" width="345" height="104"/>
     </resources>
 </document>
