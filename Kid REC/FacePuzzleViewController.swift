@@ -21,8 +21,8 @@ class FacePuzzleViewController: UIViewController {
     @IBOutlet weak var eyeButton2: UIButton!
     @IBOutlet weak var mouthButton2: UIButton!
     
-    @IBOutlet weak var nextButton: UIButton!
-    
+    @IBOutlet weak var resultImage: UIImageView!
+
     var isEyeBrownCorrect = false
     var isEyeCorrect = false
     var isMouthCorrect = false
@@ -35,7 +35,10 @@ class FacePuzzleViewController: UIViewController {
         eyeBrown.hidden = true
         eyes.hidden = true
         mouth.hidden = true
-        nextButton.hidden = true
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "FacePuzzleBackground")!)
+        
+        resultImage.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,10 +86,25 @@ class FacePuzzleViewController: UIViewController {
         showResult()
     }
     
+    @IBAction func homeClick(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
     func showResult() {
         if isMouthCorrect && isEyeBrownCorrect && isEyeCorrect {
-            nextButton.hidden = false
+            resultImage.image = UIImage(named: "RightFace")
+            resultImage.hidden = false
+
+            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(jumpToNextLevel), userInfo: nil, repeats: false)
+        } else if !(mouth.hidden || eyes.hidden || eyeBrown.hidden) {
+            
+            resultImage.image = UIImage(named: "WrongFace")
+            resultImage.hidden = false
         }
+    }
+    
+    func jumpToNextLevel(time: AnyObject) {
+        performSegueWithIdentifier("jumpToFaceCapture", sender: self)
     }
 
     /*

@@ -8,16 +8,21 @@
 
 import UIKit
 
+
 class FaceChooseViewController: UIViewController {
 
     @IBOutlet weak var face1: UIButton!
     @IBOutlet weak var face2: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var star1: UIImageView!
-    @IBOutlet weak var star2: UIImageView!
-    @IBOutlet weak var star3: UIImageView!
-    @IBOutlet weak var wrongLabel: UILabel!
+//    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var face1Result: UIImageView!
+    @IBOutlet weak var face2Result: UIImageView!
     
+    let rightImage = UIImage(named: "RightFace")
+    let wrongImage = UIImage(named: "WrongFace")
+    
+    var correctImageView: UIImageView?
+    var incorrectImageView: UIImageView?
+
     var stars = [UIImageView]()
     var correctAnswer = 0
     var correctTotal = 0
@@ -26,15 +31,14 @@ class FaceChooseViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        stars.append(star1)
-        stars.append(star2)
-        stars.append(star3)
         
         face1.setTitle("", forState: UIControlState.Normal)
         face2.setTitle("", forState: UIControlState.Normal)
         
-        wrongLabel.hidden = true
-        nextButton.hidden = true
+//        wrongLabel.hidden = true
+//        nextButton.hidden = true
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "FaceChooseBackground")!)
         
         displayFaces()
     }
@@ -51,25 +55,36 @@ class FaceChooseViewController: UIViewController {
     @IBAction func face2Select(sender: AnyObject) {
         chooseFace(1)
     }
+    @IBAction func homeClick(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
     
     // MARK: - choose face method
     func chooseFace(num: Int) {
         if (isCorrect(num)) {
             correctTotal += 1
-            wrongLabel.hidden = true
+            correctImageView?.hidden = false
         } else {
-            wrongLabel.hidden = false
+            incorrectImageView?.hidden = false
         }
         
-        updateStar()
-        
+        face1.enabled = false
+        face2.enabled = false
+
         if correctTotal == 3 {
-            face1.hidden = true
-            face2.hidden = true
-            nextButton.hidden = false
+//            nextButton.hidden = false
+            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(jumpNextLevel), userInfo: nil, repeats: false)
         } else {
-            displayFaces()
+            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(displayNextImages), userInfo: nil, repeats: false)
         }
+    }
+    
+    func displayNextImages (time: AnyObject) {
+        displayFaces()
+    }
+    
+    func jumpNextLevel (time: AnyObject) {
+        performSegueWithIdentifier("jumpToPuzzleFace", sender: self)
     }
     
     func generateNextFace() {
@@ -78,24 +93,36 @@ class FaceChooseViewController: UIViewController {
     
     func displayFaces() {
         generateNextFace()
+        
+        face1Result.hidden = true
+        face2Result.hidden = true
+        
+        let happyFace = UIImage(named: "Happy\(correctTotal + 1)")
+        let sadFace = UIImage(named: "Sad\(correctTotal + 1)")
+        
         if correctAnswer == 0 {
-            face1.setBackgroundImage(UIImage(named: "Happy1"), forState: UIControlState.Normal)
-            face2.setBackgroundImage(UIImage(named: "Sad1"), forState: UIControlState.Normal)
+            face1.setBackgroundImage(happyFace, forState: UIControlState.Normal)
+            face2.setBackgroundImage(sadFace, forState: UIControlState.Normal)
+            
+            correctImageView = face1Result
+            incorrectImageView = face2Result
         } else {
-            face1.setBackgroundImage(UIImage(named: "Sad1"), forState: UIControlState.Normal)
-            face2.setBackgroundImage(UIImage(named: "Happy1"), forState: UIControlState.Normal)
+            face1.setBackgroundImage(sadFace, forState: UIControlState.Normal)
+            face2.setBackgroundImage(happyFace, forState: UIControlState.Normal)
+            
+            correctImageView = face2Result
+            incorrectImageView = face1Result
         }
+        
+        correctImageView?.image = rightImage
+        incorrectImageView?.image = wrongImage
+        
+        face1.enabled = true
+        face2.enabled = true
     }
     
     func isCorrect(num: Int) -> Bool {
         return num == correctAnswer
-    }
-    
-    func updateStar() {
-        for i in 0 ..< correctTotal {
-            let star = stars[i] as UIImageView
-            star.highlighted = true
-        }
     }
     
 

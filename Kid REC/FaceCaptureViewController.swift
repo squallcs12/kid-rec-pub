@@ -24,6 +24,8 @@ class FaceCaptureViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "FaceCaptureBackground")!)
+        
         nextButton.hidden = true
         prepareCamera()
     }
@@ -74,7 +76,7 @@ class FaceCaptureViewController: UIViewController {
     // MARK: - Event listener
     @IBAction func takePhotoPressed(sender: AnyObject) {
         if captureSession!.running {
-            if let videoConnection = stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo) {
+            if let videoConnection = stillImageOutput?.connectionWithMediaType(AVMediaTypeVideo) {
                 stillImageOutput?.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {
                     sampleBuffer, error in
                     let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
@@ -83,13 +85,14 @@ class FaceCaptureViewController: UIViewController {
                     let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: .Down)
                     self.capturedImage.image = image
                     
-                    self.previewView.hidden = true
-                    self.capturedImage.hidden = false
-                    self.nextButton.hidden = false
-                    self.captureSession?.stopRunning()
                 })
             }
-                
+            
+            self.previewView.hidden = true
+            self.capturedImage.hidden = false
+            self.nextButton.hidden = false
+            self.captureSession?.stopRunning()
+            
             takePhotoButton.setBackgroundImage(UIImage(named: "Redo"), forState: .Normal)
         } else {
             self.previewView.hidden = false
@@ -99,6 +102,9 @@ class FaceCaptureViewController: UIViewController {
             
             takePhotoButton.setBackgroundImage(UIImage(named: "PhotoIcon"), forState: .Normal)
         }
+    }
+    @IBAction func homeClick(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
     }
 
     /*

@@ -19,7 +19,11 @@
 		D6AEF4961CB8BB4500064F95 /* FaceCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4951CB8BB4500064F95 /* FaceCaptureViewController.swift */; };
 		D6AEF4981CB8E83400064F95 /* FacePuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4971CB8E83400064F95 /* FacePuzzleViewController.swift */; };
 		D6AEF49A1CB8F23D00064F95 /* StoryPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4991CB8F23D00064F95 /* StoryPickViewController.swift */; };
-		D6AEF49C1CB8F90500064F95 /* EmotionRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF49B1CB8F90500064F95 /* EmotionRecViewController.swift */; };
+		D6AEF49C1CB8F90500064F95 /* EmoticonRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF49B1CB8F90500064F95 /* EmoticonRecViewController.swift */; };
+		D6AEF4A21CB901D900064F95 /* insidethebox.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6AEF4A11CB901D900064F95 /* insidethebox.mp3 */; };
+		D6AEF4A41CB9177700064F95 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AEF4A31CB9177700064F95 /* FBSDKLoginKit.framework */; };
+		D6AEF4A61CB9185700064F95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4A51CB9185700064F95 /* LoginViewController.swift */; };
+		D6AEF4A91CB91A2C00064F95 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AEF4A81CB91A2C00064F95 /* FBSDKCoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +62,12 @@
 		D6AEF4951CB8BB4500064F95 /* FaceCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceCaptureViewController.swift; sourceTree = "<group>"; };
 		D6AEF4971CB8E83400064F95 /* FacePuzzleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacePuzzleViewController.swift; sourceTree = "<group>"; };
 		D6AEF4991CB8F23D00064F95 /* StoryPickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryPickViewController.swift; sourceTree = "<group>"; };
-		D6AEF49B1CB8F90500064F95 /* EmotionRecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionRecViewController.swift; sourceTree = "<group>"; };
+		D6AEF49B1CB8F90500064F95 /* EmoticonRecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonRecViewController.swift; sourceTree = "<group>"; };
+		D6AEF4A11CB901D900064F95 /* insidethebox.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = insidethebox.mp3; sourceTree = "<group>"; };
+		D6AEF4A31CB9177700064F95 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20160316/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		D6AEF4A51CB9185700064F95 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D6AEF4A71CB9192600064F95 /* BridingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridingHeader.h; sourceTree = "<group>"; };
+		D6AEF4A81CB91A2C00064F95 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20160316/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6AEF4A91CB91A2C00064F95 /* FBSDKCoreKit.framework in Frameworks */,
+				D6AEF4A41CB9177700064F95 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +100,8 @@
 		D6AEF4561CB8AB3100064F95 = {
 			isa = PBXGroup;
 			children = (
+				D6AEF4A81CB91A2C00064F95 /* FBSDKCoreKit.framework */,
+				D6AEF4A31CB9177700064F95 /* FBSDKLoginKit.framework */,
 				D6AEF4611CB8AB3100064F95 /* Kid REC */,
 				D6AEF4791CB8AB3200064F95 /* Kid RECTests */,
 				D6AEF4841CB8AB3200064F95 /* Kid RECUITests */,
@@ -109,6 +122,7 @@
 		D6AEF4611CB8AB3100064F95 /* Kid REC */ = {
 			isa = PBXGroup;
 			children = (
+				D6AEF4A11CB901D900064F95 /* insidethebox.mp3 */,
 				D6AEF4621CB8AB3100064F95 /* AppDelegate.swift */,
 				D6AEF4641CB8AB3100064F95 /* ViewController.swift */,
 				D6AEF4661CB8AB3100064F95 /* Main.storyboard */,
@@ -120,7 +134,9 @@
 				D6AEF4951CB8BB4500064F95 /* FaceCaptureViewController.swift */,
 				D6AEF4971CB8E83400064F95 /* FacePuzzleViewController.swift */,
 				D6AEF4991CB8F23D00064F95 /* StoryPickViewController.swift */,
-				D6AEF49B1CB8F90500064F95 /* EmotionRecViewController.swift */,
+				D6AEF49B1CB8F90500064F95 /* EmoticonRecViewController.swift */,
+				D6AEF4A51CB9185700064F95 /* LoginViewController.swift */,
+				D6AEF4A71CB9192600064F95 /* BridingHeader.h */,
 			);
 			path = "Kid REC";
 			sourceTree = "<group>";
@@ -247,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6AEF4A21CB901D900064F95 /* insidethebox.mp3 in Resources */,
 				D6AEF4701CB8AB3200064F95 /* LaunchScreen.storyboard in Resources */,
 				D6AEF46D1CB8AB3200064F95 /* Assets.xcassets in Resources */,
 				D6AEF4681CB8AB3100064F95 /* Main.storyboard in Resources */,
@@ -274,12 +291,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6AEF4A61CB9185700064F95 /* LoginViewController.swift in Sources */,
 				D6AEF4941CB8B48F00064F95 /* FaceChooseViewController.swift in Sources */,
 				D6AEF4961CB8BB4500064F95 /* FaceCaptureViewController.swift in Sources */,
 				D6AEF49A1CB8F23D00064F95 /* StoryPickViewController.swift in Sources */,
 				D6AEF4651CB8AB3100064F95 /* ViewController.swift in Sources */,
 				D6AEF4981CB8E83400064F95 /* FacePuzzleViewController.swift in Sources */,
-				D6AEF49C1CB8F90500064F95 /* EmotionRecViewController.swift in Sources */,
+				D6AEF49C1CB8F90500064F95 /* EmoticonRecViewController.swift in Sources */,
 				D6AEF4631CB8AB3100064F95 /* AppDelegate.swift in Sources */,
 				D6AEF46B1CB8AB3200064F95 /* Kid_REC.xcdatamodeld in Sources */,
 			);
@@ -423,6 +441,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Kid\\ Rec",
+					"/Users/hatdao/Downloads/FacebookSDKs-iOS-20160316",
+				);
 				INFOPLIST_FILE = "Kid REC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bangdao.Kid-REC";
@@ -434,6 +457,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Kid\\ Rec",
+					"/Users/hatdao/Downloads/FacebookSDKs-iOS-20160316",
+				);
 				INFOPLIST_FILE = "Kid REC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bangdao.Kid-REC";
