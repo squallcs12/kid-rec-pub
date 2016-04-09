@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import ImageIO
+
 
 class FaceCaptureViewController: UIViewController {
     @IBOutlet weak var previewView: UIView!
@@ -73,16 +75,43 @@ class FaceCaptureViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func saveImage(image: UIImage) {
+        let bottomImage = image
+        let topImage = UIImage(named: "FaceCaptureBackground")!
+        
+        let newSize = CGSizeMake(1136, 640) // set this to what you need
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        
+        bottomImage.drawInRect(CGRect(origin: CGPointZero, size: newSize))
+        topImage.drawInRect(CGRect(origin: CGPointZero, size: newSize))
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIImageWriteToSavedPhotosAlbum(newImage, nil, nil, nil)
+        
+        UIGraphicsEndImageContext()
+    }
+    
     // MARK: - Event listener
     @IBAction func takePhotoPressed(sender: AnyObject) {
         if captureSession!.running {
             if let videoConnection = stillImageOutput?.connectionWithMediaType(AVMediaTypeVideo) {
                 stillImageOutput?.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {
                     sampleBuffer, error in
+                    
+                    let exifAttachments = CMGetAttachment( sampleBuffer, kCGImagePropertyExifDictionary, nil);
+                    
+                    if (exifAttachments != nil) {
+                        
+                    }
+
                     let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
                     let dataProvider = CGDataProviderCreateWithCFData(imageData)
                     let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, CGColorRenderingIntent(rawValue: 0)!)
                     let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: .Down)
+                    
+                    self.saveImage(image)
+                    
                     self.capturedImage.image = image
                     
                 })
