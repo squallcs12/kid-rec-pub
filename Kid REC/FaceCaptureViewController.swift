@@ -13,6 +13,7 @@ class FaceCaptureViewController: UIViewController {
     @IBOutlet weak var previewView: UIView!
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var capturedImage: UIImageView!
+    @IBOutlet weak var nextButton: UIButton!
     
     var captureSession: AVCaptureSession?
     var stillImageOutput: AVCaptureStillImageOutput?
@@ -22,6 +23,8 @@ class FaceCaptureViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        nextButton.hidden = true
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -69,7 +72,7 @@ class FaceCaptureViewController: UIViewController {
     
     // MARK: - Event listener
     @IBAction func takePhotoPressed(sender: AnyObject) {
-        if ((captureSession?.running) != nil) {
+        if captureSession!.running {
             if let videoConnection = stillImageOutput!.connectionWithMediaType(AVMediaTypeVideo) {
                 stillImageOutput?.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {
                     sampleBuffer, error in
@@ -81,6 +84,7 @@ class FaceCaptureViewController: UIViewController {
                     
                     self.previewView.hidden = true
                     self.capturedImage.hidden = false
+                    self.nextButton.hidden = false
                     self.captureSession?.stopRunning()
                 })
             }
@@ -89,6 +93,7 @@ class FaceCaptureViewController: UIViewController {
         } else {
             self.previewView.hidden = false
             self.capturedImage.hidden = true
+            self.nextButton.hidden = true
             self.captureSession?.startRunning()
             
             takePhotoButton.setBackgroundImage(UIImage(named: "PhotoIcon"), forState: .Normal)

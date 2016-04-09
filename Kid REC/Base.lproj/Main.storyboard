@@ -283,6 +283,7 @@
                     <navigationItem key="navigationItem" title="Chụp mặt cười" id="Xjx-Yn-Glp"/>
                     <connections>
                         <outlet property="capturedImage" destination="fJZ-8b-nqV" id="UfS-0b-bXY"/>
+                        <outlet property="nextButton" destination="paM-gf-6ap" id="vZf-xk-pbC"/>
                         <outlet property="previewView" destination="Fjz-Pf-w2B" id="sjP-Ko-naj"/>
                         <outlet property="takePhotoButton" destination="HzX-hj-HQU" id="yGY-1P-oeg"/>
                     </connections>
