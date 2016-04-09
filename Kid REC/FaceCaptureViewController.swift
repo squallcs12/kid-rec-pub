@@ -25,14 +25,12 @@ class FaceCaptureViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         nextButton.hidden = true
+        prepareCamera()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    func prepareCamera() {
         captureSession = AVCaptureSession()
         captureSession!.sessionPreset = AVCaptureSessionPresetPhoto
-        
         
         let backCamera = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         let input: AVCaptureDeviceInput?
@@ -55,14 +53,17 @@ class FaceCaptureViewController: UIViewController {
                 previewLayer!.frame = previewView.bounds
                 previewView.layer.addSublayer(previewLayer!)
                 
-                
-                captureSession!.startRunning()
-
             }
         }
         catch _ {
             
         }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        captureSession!.startRunning()
     }
 
     override func didReceiveMemoryWarning() {

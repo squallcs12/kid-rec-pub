@@ -53,7 +53,7 @@
         <!--Chọn câu chuyện-->
         <scene sceneID="2E3-wB-JLJ">
             <objects>
-                <viewController id="Wpw-DP-WuJ" sceneMemberID="viewController">
+                <viewController id="Wpw-DP-WuJ" customClass="StoryPickViewController" customModule="Kid_REC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f9k-C0-L78"/>
                         <viewControllerLayoutGuide type="bottom" id="oNZ-O6-L0g"/>
@@ -198,12 +198,24 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EyesBrown1" translatesAutoresizingMaskIntoConstraints="NO" id="poO-LM-vg4">
                                 <rect key="frame" x="196" y="86" width="209" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="SvP-hH-pKg"/>
+                                    <constraint firstAttribute="height" constant="22" id="yQz-xr-4yN"/>
+                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Eyes1" translatesAutoresizingMaskIntoConstraints="NO" id="qkO-Cd-rKh">
                                 <rect key="frame" x="224" y="116" width="152" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="NwZ-gE-p1S"/>
+                                    <constraint firstAttribute="width" constant="152" id="goF-BV-Vuv"/>
+                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mouth1" translatesAutoresizingMaskIntoConstraints="NO" id="nTh-5F-9Mb">
                                 <rect key="frame" x="253" y="192" width="94" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="47F-lG-5vu"/>
+                                    <constraint firstAttribute="width" constant="94" id="tKe-pA-da9"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzY-U4-sH9">
                                 <rect key="frame" x="20" y="86" width="92" height="21"/>
@@ -212,6 +224,9 @@
                                     <constraint firstAttribute="width" constant="92" id="R3M-lm-8yK"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="EyesBrown2"/>
+                                <connections>
+                                    <action selector="eyeBrownButton1Click:" destination="ZJq-nW-tM6" eventType="touchUpInside" id="RRh-Uv-QPb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="874-eA-yIJ">
                                 <rect key="frame" x="20" y="127" width="92" height="40"/>
@@ -220,6 +235,9 @@
                                     <constraint firstAttribute="width" constant="92" id="Ezt-r0-650"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Eyes1"/>
+                                <connections>
+                                    <action selector="eyeButton1Click:" destination="ZJq-nW-tM6" eventType="touchUpInside" id="MhK-f4-lJ8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAa-NO-zsw">
                                 <rect key="frame" x="20" y="192" width="92" height="24"/>
@@ -228,6 +246,9 @@
                                     <constraint firstAttribute="height" constant="24" id="PE8-re-xK6"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Mouth2"/>
+                                <connections>
+                                    <action selector="mouthButton1Click:" destination="ZJq-nW-tM6" eventType="touchUpInside" id="6qa-FR-sj8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eC2-9h-Jng">
                                 <rect key="frame" x="446" y="86" width="134" height="30"/>
@@ -236,6 +257,9 @@
                                     <constraint firstAttribute="height" constant="30" id="Csf-lg-9yN"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="EyesBrown1"/>
+                                <connections>
+                                    <action selector="eyeBrownButton2Click:" destination="ZJq-nW-tM6" eventType="touchUpInside" id="u7a-eI-BAN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sV-ry-rZa">
                                 <rect key="frame" x="446" y="137" width="134" height="42"/>
@@ -244,6 +268,9 @@
                                     <constraint firstAttribute="height" constant="42" id="vuS-aQ-EW4"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Eyes2"/>
+                                <connections>
+                                    <action selector="eyeButton2Click:" destination="ZJq-nW-tM6" eventType="touchUpInside" id="vbG-4P-3tS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhC-bw-uTA">
                                 <rect key="frame" x="466" y="187" width="94" height="53"/>
@@ -252,6 +279,16 @@
                                     <constraint firstAttribute="height" constant="53" id="wMN-CE-zFG"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Mouth1"/>
+                                <connections>
+                                    <action selector="mouthButton2Click:" destination="ZJq-nW-tM6" eventType="touchUpInside" id="GAy-W8-6k3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sc4-wC-S35">
+                                <rect key="frame" x="277" y="550" width="46" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="N70-fW-kvv" kind="show" id="JbG-Ol-o4A"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -259,6 +296,7 @@
                             <constraint firstItem="nTh-5F-9Mb" firstAttribute="centerX" secondItem="wOz-PK-rvV" secondAttribute="centerX" id="4og-pB-KPh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PhC-bw-uTA" secondAttribute="trailing" constant="20" id="9Dj-j9-GRp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6sV-ry-rZa" secondAttribute="trailing" id="9Q3-em-ML8"/>
+                            <constraint firstItem="sc4-wC-S35" firstAttribute="centerX" secondItem="wOz-PK-rvV" secondAttribute="centerX" id="Hfu-Fu-0UA"/>
                             <constraint firstItem="nTh-5F-9Mb" firstAttribute="top" secondItem="qkO-Cd-rKh" secondAttribute="bottom" constant="25" id="Jvp-SJ-ZXM"/>
                             <constraint firstItem="poO-LM-vg4" firstAttribute="centerX" secondItem="wOz-PK-rvV" secondAttribute="centerX" id="KWd-MH-DpB"/>
                             <constraint firstItem="eC2-9h-Jng" firstAttribute="top" secondItem="xGC-br-mld" secondAttribute="bottom" constant="22" id="Pgg-tC-akl"/>
@@ -269,6 +307,7 @@
                             <constraint firstItem="6sV-ry-rZa" firstAttribute="top" secondItem="eC2-9h-Jng" secondAttribute="bottom" constant="21" id="dFI-AZ-q5F"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eC2-9h-Jng" secondAttribute="trailing" id="eRZ-5W-rZw"/>
                             <constraint firstItem="poO-LM-vg4" firstAttribute="top" secondItem="xGC-br-mld" secondAttribute="bottom" constant="22" id="eni-J5-ufN"/>
+                            <constraint firstItem="9aZ-Ae-Orx" firstAttribute="top" secondItem="sc4-wC-S35" secondAttribute="bottom" constant="20" id="kOR-Fd-pnh"/>
                             <constraint firstAttribute="leadingMargin" secondItem="AzY-U4-sH9" secondAttribute="leading" id="lhG-Qc-lRX"/>
                             <constraint firstAttribute="leadingMargin" secondItem="SAa-NO-zsw" secondAttribute="leading" id="ti3-hy-yRy"/>
                             <constraint firstItem="AzY-U4-sH9" firstAttribute="top" secondItem="xGC-br-mld" secondAttribute="bottom" constant="22" id="x0H-2W-owR"/>
@@ -279,8 +318,15 @@
                     <navigationItem key="navigationItem" title="Ghép mặt vui" id="dKi-vJ-n6I"/>
                     <connections>
                         <outlet property="eyeBrown" destination="poO-LM-vg4" id="LrE-c4-fJC"/>
+                        <outlet property="eyeBrownButton1" destination="AzY-U4-sH9" id="RQM-OU-kyd"/>
+                        <outlet property="eyeBrownButton2" destination="eC2-9h-Jng" id="jab-zg-PiK"/>
+                        <outlet property="eyeButton1" destination="874-eA-yIJ" id="DWG-zs-rcM"/>
+                        <outlet property="eyeButton2" destination="6sV-ry-rZa" id="Pke-RU-2XB"/>
                         <outlet property="eyes" destination="qkO-Cd-rKh" id="5Nf-OG-Wdk"/>
                         <outlet property="mouth" destination="nTh-5F-9Mb" id="KxQ-84-CH5"/>
+                        <outlet property="mouthButton1" destination="SAa-NO-zsw" id="Dab-3s-Ugd"/>
+                        <outlet property="mouthButton2" destination="PhC-bw-uTA" id="fgH-I8-HTc"/>
+                        <outlet property="nextButton" destination="sc4-wC-S35" id="HnT-JN-L8M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVM-s2-awW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -336,6 +382,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="HzX-hj-HQU" secondAttribute="leading" id="3sY-G8-EfL"/>
                             <constraint firstItem="P3P-90-OCk" firstAttribute="top" secondItem="paM-gf-6ap" secondAttribute="bottom" constant="20" id="QSa-Ec-gtO"/>

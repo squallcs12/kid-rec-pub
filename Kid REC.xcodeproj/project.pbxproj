@@ -18,6 +18,7 @@
 		D6AEF4941CB8B48F00064F95 /* FaceChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4931CB8B48F00064F95 /* FaceChooseViewController.swift */; };
 		D6AEF4961CB8BB4500064F95 /* FaceCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4951CB8BB4500064F95 /* FaceCaptureViewController.swift */; };
 		D6AEF4981CB8E83400064F95 /* FacePuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4971CB8E83400064F95 /* FacePuzzleViewController.swift */; };
+		D6AEF49A1CB8F23D00064F95 /* StoryPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4991CB8F23D00064F95 /* StoryPickViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		D6AEF4931CB8B48F00064F95 /* FaceChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceChooseViewController.swift; sourceTree = "<group>"; };
 		D6AEF4951CB8BB4500064F95 /* FaceCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceCaptureViewController.swift; sourceTree = "<group>"; };
 		D6AEF4971CB8E83400064F95 /* FacePuzzleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacePuzzleViewController.swift; sourceTree = "<group>"; };
+		D6AEF4991CB8F23D00064F95 /* StoryPickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryPickViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				D6AEF4931CB8B48F00064F95 /* FaceChooseViewController.swift */,
 				D6AEF4951CB8BB4500064F95 /* FaceCaptureViewController.swift */,
 				D6AEF4971CB8E83400064F95 /* FacePuzzleViewController.swift */,
+				D6AEF4991CB8F23D00064F95 /* StoryPickViewController.swift */,
 			);
 			path = "Kid REC";
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			files = (
 				D6AEF4941CB8B48F00064F95 /* FaceChooseViewController.swift in Sources */,
 				D6AEF4961CB8BB4500064F95 /* FaceCaptureViewController.swift in Sources */,
+				D6AEF49A1CB8F23D00064F95 /* StoryPickViewController.swift in Sources */,
 				D6AEF4651CB8AB3100064F95 /* ViewController.swift in Sources */,
 				D6AEF4981CB8E83400064F95 /* FacePuzzleViewController.swift in Sources */,
 				D6AEF4631CB8AB3100064F95 /* AppDelegate.swift in Sources */,
