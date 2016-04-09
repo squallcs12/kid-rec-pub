@@ -25,6 +25,8 @@ class FaceCaptureViewController: UIViewController {
         // Do any additional setup after loading the view.
 
         nextButton.hidden = true
+        takePhotoButton.setBackgroundImage(UIImage(named: "CameraPressed"), forState: .Highlighted)
+        
         prepareCamera()
     }
     
@@ -91,14 +93,16 @@ class FaceCaptureViewController: UIViewController {
             self.nextButton.hidden = false
             self.captureSession?.stopRunning()
             
-            takePhotoButton.setBackgroundImage(UIImage(named: "Redo"), forState: .Normal)
+            takePhotoButton.setBackgroundImage(UIImage(named: "CameraUndo"), forState: .Normal)
+            takePhotoButton.setBackgroundImage(UIImage(named: "CameraUndoPressed"), forState: .Highlighted)
         } else {
             self.previewView.hidden = false
             self.capturedImage.hidden = true
             self.nextButton.hidden = true
             self.captureSession?.startRunning()
             
-            takePhotoButton.setBackgroundImage(UIImage(named: "PhotoIcon"), forState: .Normal)
+            takePhotoButton.setBackgroundImage(UIImage(named: "Camera"), forState: .Normal)
+            takePhotoButton.setBackgroundImage(UIImage(named: "CameraPressed"), forState: .Highlighted)
         }
     }
     @IBAction func homeClick(sender: AnyObject) {
