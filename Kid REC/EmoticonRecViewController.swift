@@ -223,7 +223,7 @@ class EmoticonRecViewController: UIViewController, AVCaptureVideoDataOutputSampl
     // MARK: - Segue setup
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "jumpToViewVideo" {
-            let destination = segue.destinationViewController as! FinishViewController
+            let destination = segue.destinationViewController as! AcceptViewController
             destination.setVideoURL(videoFileURL)
         }
     }

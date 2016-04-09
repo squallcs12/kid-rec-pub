@@ -33,8 +33,6 @@ class FinishViewController: UIViewController {
             
             self.videoPlayer = AVPlayer(playerItem: playerItem)
             self.playerLayer = AVPlayerLayer(player: self.videoPlayer)
-    //        self.playerLayer!.frame = self.videoView.frame
-    //        self.playerLayer?.bounds = self.videoView.
             self.playerLayer?.frame = CGRectMake(0, 0, self.videoView.bounds.width, self.videoView.bounds.height)
             self.videoPlayer!.play()
             
