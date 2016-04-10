@@ -814,6 +814,28 @@
                                     <constraint firstAttribute="height" constant="60" id="mZ4-5p-Uuj"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="VideoPause"/>
+                                <connections>
+                                    <action selector="playVideoPressed:" destination="dCv-nc-Iah" eventType="touchUpInside" id="dBw-2b-bed"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgd-KD-agP">
+                                <rect key="frame" x="202" y="217" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="XYW-1s-sge"/>
+                                    <constraint firstAttribute="height" constant="60" id="kXw-Hy-QGf"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="VideoStop"/>
+                                <connections>
+                                    <action selector="stopPressed:" destination="dCv-nc-Iah" eventType="touchUpInside" id="nnR-s2-4Bx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVL-JN-pPW">
+                                <rect key="frame" x="66" y="217" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="fos-iu-AEj"/>
+                                    <constraint firstAttribute="width" constant="60" id="zpE-QJ-g9U"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Undo"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -822,6 +844,7 @@
                             <constraint firstItem="1CL-eF-YDZ" firstAttribute="centerX" secondItem="rI4-dn-bn2" secondAttribute="centerX" id="57K-Fu-Yh6"/>
                             <constraint firstItem="rI4-dn-bn2" firstAttribute="top" secondItem="2EU-Ub-ZCH" secondAttribute="topMargin" id="7kh-zV-f9S"/>
                             <constraint firstItem="H8K-gl-7dA" firstAttribute="top" secondItem="rI4-dn-bn2" secondAttribute="bottom" id="DhH-Ot-B99"/>
+                            <constraint firstItem="bVL-JN-pPW" firstAttribute="top" secondItem="p9i-aY-AWe" secondAttribute="bottom" constant="8" id="Gba-fk-dqX"/>
                             <constraint firstItem="H8K-gl-7dA" firstAttribute="top" secondItem="Ms8-Xx-0Te" secondAttribute="bottom" constant="29" id="LLO-I6-HHw"/>
                             <constraint firstItem="H8K-gl-7dA" firstAttribute="top" secondItem="dKT-93-6ue" secondAttribute="bottom" id="OUs-PZ-1bp"/>
                             <constraint firstItem="lYk-My-Sw1" firstAttribute="leading" secondItem="p9i-aY-AWe" secondAttribute="trailing" id="TyG-Vf-2ko"/>
@@ -831,12 +854,15 @@
                             <constraint firstItem="rI4-dn-bn2" firstAttribute="leading" secondItem="2EU-Ub-ZCH" secondAttribute="leadingMargin" constant="-20" id="Z6O-JT-0I1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ms8-Xx-0Te" secondAttribute="trailing" constant="12" id="eKo-Sl-MaQ"/>
                             <constraint firstItem="1CL-eF-YDZ" firstAttribute="top" secondItem="p9i-aY-AWe" secondAttribute="bottom" constant="8" id="g8I-yd-gwg"/>
+                            <constraint firstItem="Xgd-KD-agP" firstAttribute="leading" secondItem="1CL-eF-YDZ" secondAttribute="trailing" constant="8" id="kSs-M3-a9T"/>
                             <constraint firstItem="UOr-oW-eHc" firstAttribute="centerX" secondItem="lYk-My-Sw1" secondAttribute="centerX" id="khe-w4-S47"/>
                             <constraint firstItem="UOr-oW-eHc" firstAttribute="top" secondItem="lYk-My-Sw1" secondAttribute="bottom" constant="8" id="kvX-JW-yXu"/>
                             <constraint firstItem="p9i-aY-AWe" firstAttribute="leading" secondItem="2EU-Ub-ZCH" secondAttribute="leadingMargin" constant="8" id="ofr-tC-Cpj"/>
                             <constraint firstItem="rI4-dn-bn2" firstAttribute="top" secondItem="1CL-eF-YDZ" secondAttribute="bottom" constant="-277" id="q9v-dw-UPt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rI4-dn-bn2" secondAttribute="trailing" constant="-20" id="sl9-Gd-d50"/>
                             <constraint firstItem="lYk-My-Sw1" firstAttribute="top" secondItem="I9C-Xe-fqx" secondAttribute="bottom" constant="8" id="utf-aX-971"/>
+                            <constraint firstItem="1CL-eF-YDZ" firstAttribute="leading" secondItem="bVL-JN-pPW" secondAttribute="trailing" constant="8" id="wYk-So-9nn"/>
+                            <constraint firstItem="Xgd-KD-agP" firstAttribute="top" secondItem="p9i-aY-AWe" secondAttribute="bottom" constant="8" id="xFt-45-dfq"/>
                             <constraint firstItem="I9C-Xe-fqx" firstAttribute="leading" secondItem="p9i-aY-AWe" secondAttribute="trailing" id="xZD-rI-jmN"/>
                         </constraints>
                         <variation key="default">
@@ -851,6 +877,8 @@
                         <outlet property="accept2Button" destination="lYk-My-Sw1" id="FCW-QR-Wrh"/>
                         <outlet property="accept3Button" destination="UOr-oW-eHc" id="Xpq-t3-FcD"/>
                         <outlet property="completeButton" destination="Ms8-Xx-0Te" id="wZp-ed-afn"/>
+                        <outlet property="playButton" destination="1CL-eF-YDZ" id="SGf-0b-fcO"/>
+                        <outlet property="stopButton" destination="Xgd-KD-agP" id="gt2-Ve-TRf"/>
                         <outlet property="videoView" destination="p9i-aY-AWe" id="mOv-B1-L5C"/>
                     </connections>
                 </viewController>

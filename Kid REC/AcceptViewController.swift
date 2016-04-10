@@ -18,6 +18,9 @@ class AcceptViewController: UIViewController {
     @IBOutlet weak var accept3Button: UIButton!
     @IBOutlet weak var completeButton: UIButton!
     
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
     var isPlaying = true
     var videoPlayer: AVPlayer!
     var playerLayer: AVPlayerLayer?
@@ -59,8 +62,13 @@ class AcceptViewController: UIViewController {
     func playerDidReachEnd(notification: NSNotification) {
         stopPlayVideo()
     }
-
+    
     // MARK: - event listener
+    
+    @IBAction func stopPressed(sender: AnyObject) {
+        stopPlayVideo()
+    }
+    
     @IBAction func acceptClick(sender: UIButton) {
         sender.setBackgroundImage(UIImage(named: "Accepted"), forState: .Disabled)
         sender.enabled = false
@@ -68,6 +76,17 @@ class AcceptViewController: UIViewController {
         if totalAccepted >= 3 {
             completeButton.hidden = false
         }
+    }
+
+    @IBAction func playVideoPressed(sender: AnyObject) {
+        if (isPlaying) {
+            self.videoPlayer.pause()
+            playButton.setBackgroundImage(UIImage(named: "VideoPlay"), forState: .Normal)
+        } else {
+            self.videoPlayer.play()
+            playButton.setBackgroundImage(UIImage(named: "VideoPause"), forState: .Normal)
+        }
+        isPlaying = !isPlaying
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -83,7 +102,7 @@ class AcceptViewController: UIViewController {
         self.videoPlayer.seekToTime(kCMTimeZero)
         
         isPlaying = false
-//        playButton.setBackgroundImage(UIImage(named: "VideoPlay"), forState: .Normal)
+        playButton.setBackgroundImage(UIImage(named: "VideoPlay"), forState: .Normal)
     }
     
 
