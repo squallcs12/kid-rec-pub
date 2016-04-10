@@ -807,26 +807,44 @@
                                     <segue destination="V2c-uo-iHr" kind="show" identifier="jumpToFinish" id="G8O-pu-1B6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CL-eF-YDZ">
+                                <rect key="frame" x="134" y="217" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="LQA-vO-dLe"/>
+                                    <constraint firstAttribute="height" constant="60" id="mZ4-5p-Uuj"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="VideoPause"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="p9i-aY-AWe" firstAttribute="top" secondItem="6RI-ZL-07R" secondAttribute="bottom" constant="36" id="31C-kv-a0Y"/>
+                            <constraint firstItem="1CL-eF-YDZ" firstAttribute="centerX" secondItem="rI4-dn-bn2" secondAttribute="centerX" id="57K-Fu-Yh6"/>
                             <constraint firstItem="rI4-dn-bn2" firstAttribute="top" secondItem="2EU-Ub-ZCH" secondAttribute="topMargin" id="7kh-zV-f9S"/>
                             <constraint firstItem="H8K-gl-7dA" firstAttribute="top" secondItem="rI4-dn-bn2" secondAttribute="bottom" id="DhH-Ot-B99"/>
                             <constraint firstItem="H8K-gl-7dA" firstAttribute="top" secondItem="Ms8-Xx-0Te" secondAttribute="bottom" constant="29" id="LLO-I6-HHw"/>
                             <constraint firstItem="H8K-gl-7dA" firstAttribute="top" secondItem="dKT-93-6ue" secondAttribute="bottom" id="OUs-PZ-1bp"/>
                             <constraint firstItem="lYk-My-Sw1" firstAttribute="leading" secondItem="p9i-aY-AWe" secondAttribute="trailing" id="TyG-Vf-2ko"/>
                             <constraint firstItem="dKT-93-6ue" firstAttribute="leading" secondItem="2EU-Ub-ZCH" secondAttribute="leadingMargin" constant="-20" id="UHQ-DL-pNR"/>
+                            <constraint firstItem="1CL-eF-YDZ" firstAttribute="leading" secondItem="2EU-Ub-ZCH" secondAttribute="leadingMargin" constant="114" id="YTR-Cb-Cmj"/>
                             <constraint firstItem="I9C-Xe-fqx" firstAttribute="top" secondItem="6RI-ZL-07R" secondAttribute="bottom" constant="65" id="Z0D-rE-iPs"/>
                             <constraint firstItem="rI4-dn-bn2" firstAttribute="leading" secondItem="2EU-Ub-ZCH" secondAttribute="leadingMargin" constant="-20" id="Z6O-JT-0I1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ms8-Xx-0Te" secondAttribute="trailing" constant="12" id="eKo-Sl-MaQ"/>
+                            <constraint firstItem="1CL-eF-YDZ" firstAttribute="top" secondItem="p9i-aY-AWe" secondAttribute="bottom" constant="8" id="g8I-yd-gwg"/>
                             <constraint firstItem="UOr-oW-eHc" firstAttribute="centerX" secondItem="lYk-My-Sw1" secondAttribute="centerX" id="khe-w4-S47"/>
                             <constraint firstItem="UOr-oW-eHc" firstAttribute="top" secondItem="lYk-My-Sw1" secondAttribute="bottom" constant="8" id="kvX-JW-yXu"/>
                             <constraint firstItem="p9i-aY-AWe" firstAttribute="leading" secondItem="2EU-Ub-ZCH" secondAttribute="leadingMargin" constant="8" id="ofr-tC-Cpj"/>
+                            <constraint firstItem="rI4-dn-bn2" firstAttribute="top" secondItem="1CL-eF-YDZ" secondAttribute="bottom" constant="-277" id="q9v-dw-UPt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rI4-dn-bn2" secondAttribute="trailing" constant="-20" id="sl9-Gd-d50"/>
                             <constraint firstItem="lYk-My-Sw1" firstAttribute="top" secondItem="I9C-Xe-fqx" secondAttribute="bottom" constant="8" id="utf-aX-971"/>
                             <constraint firstItem="I9C-Xe-fqx" firstAttribute="leading" secondItem="p9i-aY-AWe" secondAttribute="trailing" id="xZD-rI-jmN"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="q9v-dw-UPt"/>
+                                <exclude reference="57K-Fu-Yh6"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="accept1Button" destination="I9C-Xe-fqx" id="Iwv-CM-ker"/>
