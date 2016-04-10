@@ -836,6 +836,9 @@
                                     <constraint firstAttribute="width" constant="60" id="zpE-QJ-g9U"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Undo"/>
+                                <connections>
+                                    <action selector="redoPressed:" destination="dCv-nc-Iah" eventType="touchUpInside" id="lgf-kc-V8n"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

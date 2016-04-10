@@ -77,6 +77,9 @@ class AcceptViewController: UIViewController {
             completeButton.hidden = false
         }
     }
+    @IBAction func redoPressed(sender: AnyObject) {
+        navigationController?.popViewControllerAnimated(true)
+    }
 
     @IBAction func playVideoPressed(sender: AnyObject) {
         if (isPlaying) {
