@@ -69,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        self.playBackgroundMusic("insidethebox.mp3")
+        self.playBackgroundMusic("song.mp3")
     }
 
     func applicationWillTerminate(application: UIApplication) {
