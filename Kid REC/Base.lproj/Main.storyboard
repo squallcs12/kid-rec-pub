@@ -18,19 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoryMap1Effect1" translatesAutoresizingMaskIntoConstraints="NO" id="8be-bs-Y1D">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="c1t-va-y9L"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAh-Iq-GYI">
                                 <rect key="frame" x="41" y="111" width="146" height="104"/>
                                 <state key="normal" title="Chuyện Vui"/>
                                 <connections>
-                                    <segue destination="zaG-ym-SGD" kind="show" id="9M1-ZU-ajX"/>
+                                    <action selector="happyStoryPressed:" destination="Wpw-DP-WuJ" eventType="touchUpInside" id="xeb-0M-jMx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oNZ-O6-L0g" firstAttribute="top" secondItem="8be-bs-Y1D" secondAttribute="bottom" id="PJZ-VM-yEW"/>
+                            <constraint firstItem="8be-bs-Y1D" firstAttribute="top" secondItem="Xz2-FV-CeH" secondAttribute="topMargin" id="VLK-Pq-ds3"/>
+                            <constraint firstItem="8be-bs-Y1D" firstAttribute="leading" secondItem="Xz2-FV-CeH" secondAttribute="leadingMargin" constant="-20" id="naP-M3-Gpz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chọn câu chuyện" id="rZM-6f-RoW"/>
                     <connections>
                         <outlet property="happyStoryButton" destination="BAh-Iq-GYI" id="hSZ-dt-d6q"/>
+                        <outlet property="happyStoryImage" destination="8be-bs-Y1D" id="iJI-PD-4ph"/>
+                        <segue destination="zaG-ym-SGD" kind="show" identifier="jumpToFaceChoose" id="hf4-LX-CxP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yd4-QE-WCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1092,6 +1105,7 @@
         <image name="RightFace" width="345" height="95"/>
         <image name="Start" width="383" height="106"/>
         <image name="Stop" width="163" height="159"/>
+        <image name="StoryMap1Effect1" width="453" height="640"/>
         <image name="Undo" width="136" height="139"/>
         <image name="VideoPause" width="117" height="123"/>
         <image name="VideoStop" width="114" height="123"/>

@@ -11,6 +11,7 @@ import UIKit
 class StoryPickViewController: UIViewController {
 
     @IBOutlet weak var happyStoryButton: UIButton!
+    @IBOutlet weak var happyStoryImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,28 @@ class StoryPickViewController: UIViewController {
         
     }
     
+    @IBAction func happyStoryPressed(sender: AnyObject) {
+        NSTimer.scheduledTimerWithTimeInterval(0.33, target: self, selector: #selector(switchHappyFrame2), userInfo: nil, repeats: false)
+    }
+    
+    func switchHappyFrame2(time: AnyObject) {
+        happyStoryImage.image = UIImage(named: "StoryMap1Effect2")
+        NSTimer.scheduledTimerWithTimeInterval(0.33, target: self, selector: #selector(switchHappyFrame3), userInfo: nil, repeats: false)
+    }
+    
+    func switchHappyFrame3(time: AnyObject) {
+        happyStoryImage.image = UIImage(named: "StoryMap1Effect3")
+        NSTimer.scheduledTimerWithTimeInterval(0.33, target: self, selector: #selector(switchHappyFrame1), userInfo: nil, repeats: false)
+    }
+    
+    func switchHappyFrame1(time: AnyObject) {
+        happyStoryImage.image = UIImage(named: "StoryMap1Effect1")
+        NSTimer.scheduledTimerWithTimeInterval(0.33, target: self, selector: #selector(jumpToFaceChoose), userInfo: nil, repeats: false)
+    }
+    
+    func jumpToFaceChoose(time: AnyObject) {
+        performSegueWithIdentifier("jumpToFaceChoose", sender: self)
+    }
 
     /*
     // MARK: - Navigation
