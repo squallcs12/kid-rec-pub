@@ -70,7 +70,7 @@ class EmoticonRecViewController: UIViewController, AVCaptureVideoDataOutputSampl
         let input: AVCaptureDeviceInput?
         do {
             input = try AVCaptureDeviceInput(device: backCamera)
-            
+//            
             if captureSession!.canAddInput(input) {
                 captureSession!.addInput(input)
                 

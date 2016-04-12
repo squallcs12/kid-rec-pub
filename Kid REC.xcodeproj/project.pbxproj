@@ -7,28 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65D7BDE91CBD5B93007A5259 /* AcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7BDDE1CBD5B93007A5259 /* AcceptViewController.swift */; };
+		65D7BDEA1CBD5B93007A5259 /* EmoticonRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7BDDF1CBD5B93007A5259 /* EmoticonRecViewController.swift */; };
+		65D7BDEB1CBD5B93007A5259 /* FaceCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7BDE01CBD5B93007A5259 /* FaceCaptureViewController.swift */; };
+		65D7BDEC1CBD5B93007A5259 /* FaceChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7BDE11CBD5B93007A5259 /* FaceChooseViewController.swift */; };
+		65D7BDED1CBD5B93007A5259 /* FacePuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7BDE21CBD5B93007A5259 /* FacePuzzleViewController.swift */; };
+		65D7BDEE1CBD5B93007A5259 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7BDE31CBD5B93007A5259 /* FinishViewController.swift */; };
+		65D7BDF01CBD5B93007A5259 /* ParentsCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7BDE51CBD5B93007A5259 /* ParentsCallViewController.swift */; };
+		65D7BDF11CBD5B93007A5259 /* ParentsGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7BDE61CBD5B93007A5259 /* ParentsGuideViewController.swift */; };
+		65D7BDF21CBD5B93007A5259 /* StoryPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7BDE71CBD5B93007A5259 /* StoryPickViewController.swift */; };
+		65D7BDF71CBD5BC5007A5259 /* insidethebox.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65D7BDF51CBD5BC5007A5259 /* insidethebox.mp3 */; };
+		65D7BDF81CBD5BC5007A5259 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65D7BDF61CBD5BC5007A5259 /* song.mp3 */; };
+		9297CFF4BFFF4248D25D9A76 /* Pods_Kid_REC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E0F3AC388B97BC344E4F10 /* Pods_Kid_REC.framework */; };
 		D6AEF4631CB8AB3100064F95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4621CB8AB3100064F95 /* AppDelegate.swift */; };
-		D6AEF4651CB8AB3100064F95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4641CB8AB3100064F95 /* ViewController.swift */; };
 		D6AEF4681CB8AB3100064F95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6AEF4661CB8AB3100064F95 /* Main.storyboard */; };
 		D6AEF46B1CB8AB3200064F95 /* Kid_REC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4691CB8AB3200064F95 /* Kid_REC.xcdatamodeld */; };
 		D6AEF46D1CB8AB3200064F95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6AEF46C1CB8AB3200064F95 /* Assets.xcassets */; };
-		D6AEF4701CB8AB3200064F95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6AEF46E1CB8AB3200064F95 /* LaunchScreen.storyboard */; };
 		D6AEF47B1CB8AB3200064F95 /* Kid_RECTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF47A1CB8AB3200064F95 /* Kid_RECTests.swift */; };
 		D6AEF4861CB8AB3200064F95 /* Kid_RECUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4851CB8AB3200064F95 /* Kid_RECUITests.swift */; };
-		D6AEF4941CB8B48F00064F95 /* FaceChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4931CB8B48F00064F95 /* FaceChooseViewController.swift */; };
-		D6AEF4961CB8BB4500064F95 /* FaceCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4951CB8BB4500064F95 /* FaceCaptureViewController.swift */; };
-		D6AEF4981CB8E83400064F95 /* FacePuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4971CB8E83400064F95 /* FacePuzzleViewController.swift */; };
-		D6AEF49A1CB8F23D00064F95 /* StoryPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4991CB8F23D00064F95 /* StoryPickViewController.swift */; };
-		D6AEF49C1CB8F90500064F95 /* EmoticonRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF49B1CB8F90500064F95 /* EmoticonRecViewController.swift */; };
-		D6AEF4A21CB901D900064F95 /* insidethebox.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6AEF4A11CB901D900064F95 /* insidethebox.mp3 */; };
-		D6AEF4A41CB9177700064F95 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AEF4A31CB9177700064F95 /* FBSDKLoginKit.framework */; };
-		D6AEF4A61CB9185700064F95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4A51CB9185700064F95 /* LoginViewController.swift */; };
-		D6AEF4A91CB91A2C00064F95 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AEF4A81CB91A2C00064F95 /* FBSDKCoreKit.framework */; };
-		D6AEF4AB1CB9669A00064F95 /* ParentsCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4AA1CB9669A00064F95 /* ParentsCallViewController.swift */; };
-		D6AEF4AD1CB96D2D00064F95 /* ParentsGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4AC1CB96D2D00064F95 /* ParentsGuideViewController.swift */; };
-		D6AEF4AF1CB9AA7900064F95 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4AE1CB9AA7900064F95 /* FinishViewController.swift */; };
-		D6AEF4B11CB9BAA500064F95 /* AcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AEF4B01CB9BAA500064F95 /* AcceptViewController.swift */; };
-		D6AEF4B31CB9EE7E00064F95 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6AEF4B21CB9EE7E00064F95 /* song.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,13 +45,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D25EA53CC7C0F8BAFAB90FB /* Pods-Kid REC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kid REC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kid REC/Pods-Kid REC.release.xcconfig"; sourceTree = "<group>"; };
+		65D7BDDE1CBD5B93007A5259 /* AcceptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptViewController.swift; sourceTree = "<group>"; };
+		65D7BDDF1CBD5B93007A5259 /* EmoticonRecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonRecViewController.swift; sourceTree = "<group>"; };
+		65D7BDE01CBD5B93007A5259 /* FaceCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceCaptureViewController.swift; sourceTree = "<group>"; };
+		65D7BDE11CBD5B93007A5259 /* FaceChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceChooseViewController.swift; sourceTree = "<group>"; };
+		65D7BDE21CBD5B93007A5259 /* FacePuzzleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacePuzzleViewController.swift; sourceTree = "<group>"; };
+		65D7BDE31CBD5B93007A5259 /* FinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		65D7BDE51CBD5B93007A5259 /* ParentsCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentsCallViewController.swift; sourceTree = "<group>"; };
+		65D7BDE61CBD5B93007A5259 /* ParentsGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentsGuideViewController.swift; sourceTree = "<group>"; };
+		65D7BDE71CBD5B93007A5259 /* StoryPickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryPickViewController.swift; sourceTree = "<group>"; };
+		65D7BDF51CBD5BC5007A5259 /* insidethebox.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = insidethebox.mp3; sourceTree = "<group>"; };
+		65D7BDF61CBD5BC5007A5259 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
+		68D6B541CC2FA2B99AAD7F71 /* Pods-Kid REC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kid REC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kid REC/Pods-Kid REC.debug.xcconfig"; sourceTree = "<group>"; };
 		D6AEF45F1CB8AB3100064F95 /* Kid REC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kid REC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6AEF4621CB8AB3100064F95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D6AEF4641CB8AB3100064F95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D6AEF4671CB8AB3100064F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6AEF46A1CB8AB3200064F95 /* Kid_REC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kid_REC.xcdatamodel; sourceTree = "<group>"; };
 		D6AEF46C1CB8AB3200064F95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D6AEF46F1CB8AB3200064F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6AEF4711CB8AB3200064F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6AEF4761CB8AB3200064F95 /* Kid RECTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kid RECTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6AEF47A1CB8AB3200064F95 /* Kid_RECTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kid_RECTests.swift; sourceTree = "<group>"; };
@@ -63,21 +70,8 @@
 		D6AEF4811CB8AB3200064F95 /* Kid RECUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kid RECUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6AEF4851CB8AB3200064F95 /* Kid_RECUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kid_RECUITests.swift; sourceTree = "<group>"; };
 		D6AEF4871CB8AB3200064F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6AEF4931CB8B48F00064F95 /* FaceChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceChooseViewController.swift; sourceTree = "<group>"; };
-		D6AEF4951CB8BB4500064F95 /* FaceCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceCaptureViewController.swift; sourceTree = "<group>"; };
-		D6AEF4971CB8E83400064F95 /* FacePuzzleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacePuzzleViewController.swift; sourceTree = "<group>"; };
-		D6AEF4991CB8F23D00064F95 /* StoryPickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryPickViewController.swift; sourceTree = "<group>"; };
-		D6AEF49B1CB8F90500064F95 /* EmoticonRecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonRecViewController.swift; sourceTree = "<group>"; };
-		D6AEF4A11CB901D900064F95 /* insidethebox.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = insidethebox.mp3; sourceTree = "<group>"; };
-		D6AEF4A31CB9177700064F95 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20160316/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
-		D6AEF4A51CB9185700064F95 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D6AEF4A71CB9192600064F95 /* BridingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridingHeader.h; sourceTree = "<group>"; };
-		D6AEF4A81CB91A2C00064F95 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20160316/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
-		D6AEF4AA1CB9669A00064F95 /* ParentsCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentsCallViewController.swift; sourceTree = "<group>"; };
-		D6AEF4AC1CB96D2D00064F95 /* ParentsGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentsGuideViewController.swift; sourceTree = "<group>"; };
-		D6AEF4AE1CB9AA7900064F95 /* FinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
-		D6AEF4B01CB9BAA500064F95 /* AcceptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptViewController.swift; sourceTree = "<group>"; };
-		D6AEF4B21CB9EE7E00064F95 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
+		E3E0F3AC388B97BC344E4F10 /* Pods_Kid_REC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kid_REC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6AEF4A91CB91A2C00064F95 /* FBSDKCoreKit.framework in Frameworks */,
-				D6AEF4A41CB9177700064F95 /* FBSDKLoginKit.framework in Frameworks */,
+				9297CFF4BFFF4248D25D9A76 /* Pods_Kid_REC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,15 +100,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EEF2937088DFAF9201DE7F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68D6B541CC2FA2B99AAD7F71 /* Pods-Kid REC.debug.xcconfig */,
+				0D25EA53CC7C0F8BAFAB90FB /* Pods-Kid REC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		65D7BDD91CBD4F00007A5259 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D6AEF4A71CB9192600064F95 /* BridingHeader.h */,
+				D6AEF4621CB8AB3100064F95 /* AppDelegate.swift */,
+				D6AEF4711CB8AB3200064F95 /* Info.plist */,
+			);
+			name = SupportFiles;
+			sourceTree = "<group>";
+		};
+		65D7BDDB1CBD4F6E007A5259 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D6AEF4661CB8AB3100064F95 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		65D7BDDC1CBD4F7C007A5259 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6AEF4691CB8AB3200064F95 /* Kid_REC.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		65D7BDDD1CBD5B93007A5259 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				65D7BDDE1CBD5B93007A5259 /* AcceptViewController.swift */,
+				65D7BDDF1CBD5B93007A5259 /* EmoticonRecViewController.swift */,
+				65D7BDE01CBD5B93007A5259 /* FaceCaptureViewController.swift */,
+				65D7BDE11CBD5B93007A5259 /* FaceChooseViewController.swift */,
+				65D7BDE21CBD5B93007A5259 /* FacePuzzleViewController.swift */,
+				65D7BDE31CBD5B93007A5259 /* FinishViewController.swift */,
+				65D7BDE51CBD5B93007A5259 /* ParentsCallViewController.swift */,
+				65D7BDE61CBD5B93007A5259 /* ParentsGuideViewController.swift */,
+				65D7BDE71CBD5B93007A5259 /* StoryPickViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		65D7BDF41CBD5BC5007A5259 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				65D7BDF51CBD5BC5007A5259 /* insidethebox.mp3 */,
+				65D7BDF61CBD5BC5007A5259 /* song.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		D6AEF4561CB8AB3100064F95 = {
 			isa = PBXGroup;
 			children = (
-				D6AEF4A81CB91A2C00064F95 /* FBSDKCoreKit.framework */,
-				D6AEF4A31CB9177700064F95 /* FBSDKLoginKit.framework */,
 				D6AEF4611CB8AB3100064F95 /* Kid REC */,
 				D6AEF4791CB8AB3200064F95 /* Kid RECTests */,
 				D6AEF4841CB8AB3200064F95 /* Kid RECUITests */,
 				D6AEF4601CB8AB3100064F95 /* Products */,
+				1EEF2937088DFAF9201DE7F4 /* Pods */,
+				D88D3626814AB36A10A942C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,26 +185,12 @@
 		D6AEF4611CB8AB3100064F95 /* Kid REC */ = {
 			isa = PBXGroup;
 			children = (
-				D6AEF4B21CB9EE7E00064F95 /* song.mp3 */,
-				D6AEF4A11CB901D900064F95 /* insidethebox.mp3 */,
-				D6AEF4621CB8AB3100064F95 /* AppDelegate.swift */,
-				D6AEF4641CB8AB3100064F95 /* ViewController.swift */,
-				D6AEF4661CB8AB3100064F95 /* Main.storyboard */,
+				65D7BDF41CBD5BC5007A5259 /* Audio */,
+				65D7BDDC1CBD4F7C007A5259 /* Models */,
+				65D7BDDB1CBD4F6E007A5259 /* Storyboards */,
+				65D7BDDD1CBD5B93007A5259 /* ViewControllers */,
+				65D7BDD91CBD4F00007A5259 /* SupportFiles */,
 				D6AEF46C1CB8AB3200064F95 /* Assets.xcassets */,
-				D6AEF46E1CB8AB3200064F95 /* LaunchScreen.storyboard */,
-				D6AEF4711CB8AB3200064F95 /* Info.plist */,
-				D6AEF4691CB8AB3200064F95 /* Kid_REC.xcdatamodeld */,
-				D6AEF4931CB8B48F00064F95 /* FaceChooseViewController.swift */,
-				D6AEF4951CB8BB4500064F95 /* FaceCaptureViewController.swift */,
-				D6AEF4971CB8E83400064F95 /* FacePuzzleViewController.swift */,
-				D6AEF4991CB8F23D00064F95 /* StoryPickViewController.swift */,
-				D6AEF49B1CB8F90500064F95 /* EmoticonRecViewController.swift */,
-				D6AEF4A51CB9185700064F95 /* LoginViewController.swift */,
-				D6AEF4A71CB9192600064F95 /* BridingHeader.h */,
-				D6AEF4AA1CB9669A00064F95 /* ParentsCallViewController.swift */,
-				D6AEF4AC1CB96D2D00064F95 /* ParentsGuideViewController.swift */,
-				D6AEF4AE1CB9AA7900064F95 /* FinishViewController.swift */,
-				D6AEF4B01CB9BAA500064F95 /* AcceptViewController.swift */,
 			);
 			path = "Kid REC";
 			sourceTree = "<group>";
@@ -174,6 +213,14 @@
 			path = "Kid RECUITests";
 			sourceTree = "<group>";
 		};
+		D88D3626814AB36A10A942C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3E0F3AC388B97BC344E4F10 /* Pods_Kid_REC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6AEF48A1CB8AB3200064F95 /* Build configuration list for PBXNativeTarget "Kid REC" */;
 			buildPhases = (
+				6C6315F1500D899B903EFCCC /* Check Pods Manifest.lock */,
 				D6AEF45B1CB8AB3100064F95 /* Sources */,
 				D6AEF45C1CB8AB3100064F95 /* Frameworks */,
 				D6AEF45D1CB8AB3100064F95 /* Resources */,
+				957C6BBFB0D12085C3DCE747 /* Embed Pods Frameworks */,
+				8849A0E5FC0D7E16B409FF21 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,11 +328,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6AEF4A21CB901D900064F95 /* insidethebox.mp3 in Resources */,
-				D6AEF4B31CB9EE7E00064F95 /* song.mp3 in Resources */,
-				D6AEF4701CB8AB3200064F95 /* LaunchScreen.storyboard in Resources */,
 				D6AEF46D1CB8AB3200064F95 /* Assets.xcassets in Resources */,
 				D6AEF4681CB8AB3100064F95 /* Main.storyboard in Resources */,
+				65D7BDF71CBD5BC5007A5259 /* insidethebox.mp3 in Resources */,
+				65D7BDF81CBD5BC5007A5259 /* song.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,24 +351,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6C6315F1500D899B903EFCCC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8849A0E5FC0D7E16B409FF21 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kid REC/Pods-Kid REC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		957C6BBFB0D12085C3DCE747 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kid REC/Pods-Kid REC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D6AEF45B1CB8AB3100064F95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6AEF4A61CB9185700064F95 /* LoginViewController.swift in Sources */,
-				D6AEF4B11CB9BAA500064F95 /* AcceptViewController.swift in Sources */,
-				D6AEF4AD1CB96D2D00064F95 /* ParentsGuideViewController.swift in Sources */,
-				D6AEF4941CB8B48F00064F95 /* FaceChooseViewController.swift in Sources */,
-				D6AEF4AB1CB9669A00064F95 /* ParentsCallViewController.swift in Sources */,
-				D6AEF4961CB8BB4500064F95 /* FaceCaptureViewController.swift in Sources */,
-				D6AEF4AF1CB9AA7900064F95 /* FinishViewController.swift in Sources */,
-				D6AEF49A1CB8F23D00064F95 /* StoryPickViewController.swift in Sources */,
-				D6AEF4651CB8AB3100064F95 /* ViewController.swift in Sources */,
-				D6AEF4981CB8E83400064F95 /* FacePuzzleViewController.swift in Sources */,
-				D6AEF49C1CB8F90500064F95 /* EmoticonRecViewController.swift in Sources */,
 				D6AEF4631CB8AB3100064F95 /* AppDelegate.swift in Sources */,
+				65D7BDF01CBD5B93007A5259 /* ParentsCallViewController.swift in Sources */,
+				65D7BDEB1CBD5B93007A5259 /* FaceCaptureViewController.swift in Sources */,
+				65D7BDEC1CBD5B93007A5259 /* FaceChooseViewController.swift in Sources */,
+				65D7BDF11CBD5B93007A5259 /* ParentsGuideViewController.swift in Sources */,
+				65D7BDEA1CBD5B93007A5259 /* EmoticonRecViewController.swift in Sources */,
+				65D7BDED1CBD5B93007A5259 /* FacePuzzleViewController.swift in Sources */,
+				65D7BDEE1CBD5B93007A5259 /* FinishViewController.swift in Sources */,
 				D6AEF46B1CB8AB3200064F95 /* Kid_REC.xcdatamodeld in Sources */,
+				65D7BDE91CBD5B93007A5259 /* AcceptViewController.swift in Sources */,
+				65D7BDF21CBD5B93007A5259 /* StoryPickViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,14 +456,6 @@
 				D6AEF4671CB8AB3100064F95 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D6AEF46E1CB8AB3200064F95 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6AEF46F1CB8AB3200064F95 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -459,12 +546,15 @@
 		};
 		D6AEF48B1CB8AB3200064F95 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68D6B541CC2FA2B99AAD7F71 /* Pods-Kid REC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Kid\\ Rec",
 					"/Users/hatdao/Downloads/FacebookSDKs-iOS-20160316",
+					"$(PROJECT_DIR)/Kid",
+					REC,
 				);
 				INFOPLIST_FILE = "Kid REC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -475,12 +565,15 @@
 		};
 		D6AEF48C1CB8AB3200064F95 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D25EA53CC7C0F8BAFAB90FB /* Pods-Kid REC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Kid\\ Rec",
 					"/Users/hatdao/Downloads/FacebookSDKs-iOS-20160316",
+					"$(PROJECT_DIR)/Kid",
+					REC,
 				);
 				INFOPLIST_FILE = "Kid REC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -554,6 +647,7 @@
 				D6AEF48C1CB8AB3200064F95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6AEF48D1CB8AB3200064F95 /* Build configuration list for PBXNativeTarget "Kid RECTests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +656,7 @@
 				D6AEF48F1CB8AB3200064F95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6AEF4901CB8AB3200064F95 /* Build configuration list for PBXNativeTarget "Kid RECUITests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +665,7 @@
 				D6AEF4921CB8AB3200064F95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

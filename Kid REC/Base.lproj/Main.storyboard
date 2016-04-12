@@ -150,7 +150,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EyesBrown1" translatesAutoresizingMaskIntoConstraints="NO" id="poO-LM-vg4">
-                                <rect key="frame" x="250.5" y="140" width="100" height="22"/>
+                                <rect key="frame" x="250" y="140" width="100" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="SvP-hH-pKg"/>
                                     <constraint firstAttribute="height" constant="22" id="yQz-xr-4yN"/>
@@ -397,7 +397,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="paM-gf-6ap" firstAttribute="top" secondItem="HzX-hj-HQU" secondAttribute="bottom" constant="10" id="46e-A5-lal"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cDK-H9-M2L" secondAttribute="trailing" constant="-20" id="6wi-Ka-w4i"/>
@@ -494,8 +494,8 @@
                                 <state key="normal" backgroundImage="Home"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="e1c-0B-iQp"/>
                                         <exclude reference="PuO-gg-rJV"/>
+                                        <exclude reference="e1c-0B-iQp"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -505,7 +505,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ox2-Zn-2fK">
-                                <rect key="frame" x="195.5" y="505" width="210" height="75"/>
+                                <rect key="frame" x="195" y="505" width="210" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="JPy-HN-xMM"/>
                                     <constraint firstAttribute="height" constant="75" id="jKZ-nn-ZHj"/>
@@ -556,8 +556,8 @@
                                 <state key="normal" backgroundImage="Home"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="hb6-Xc-deJ"/>
                                         <exclude reference="6aj-8d-pcr"/>
+                                        <exclude reference="hb6-Xc-deJ"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -568,7 +568,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edh-Lr-zbE">
-                                <rect key="frame" x="210.5" y="522" width="179" height="58"/>
+                                <rect key="frame" x="211" y="522" width="179" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="YEn-eF-NbZ"/>
                                     <constraint firstAttribute="width" constant="179" id="dDi-DL-sti"/>
@@ -629,8 +629,8 @@
                                 <state key="normal" backgroundImage="Home"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="iI7-GV-fC2"/>
                                         <exclude reference="Hlv-6I-Dcy"/>
+                                        <exclude reference="iI7-GV-fC2"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -672,8 +672,8 @@
                                     <action selector="undoPressed:" destination="Qbo-9t-4yS" eventType="touchUpInside" id="6Xa-BP-YA9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b31-8e-TwW">
-                                <rect key="frame" x="265" y="443" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b31-8e-TwW">
+                                <rect key="frame" x="265" y="510" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="8SA-sh-JEZ"/>
                                     <constraint firstAttribute="height" constant="70" id="smr-DX-EM2"/>
@@ -766,8 +766,8 @@
                                 <state key="normal" backgroundImage="Home"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="wBh-aj-U8n"/>
                                         <exclude reference="Cyy-UB-QBi"/>
+                                        <exclude reference="wBh-aj-U8n"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -979,8 +979,8 @@
                                 <state key="normal" backgroundImage="Home"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="pFn-fV-u42"/>
                                         <exclude reference="Y8d-Ol-Qr5"/>
+                                        <exclude reference="pFn-fV-u42"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -1037,33 +1037,6 @@
             </objects>
             <point key="canvasLocation" x="6561" y="1094"/>
         </scene>
-        <!--Login-->
-        <scene sceneID="pYp-ZY-Jly">
-            <objects>
-                <viewController title="Login" id="XDM-6t-96g" customClass="LoginViewController" customModule="Kid_REC" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5jk-bw-Q2M"/>
-                        <viewControllerLayoutGuide type="bottom" id="0Sm-SW-iSB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QvI-PU-nZR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRb-Sg-lWX">
-                                <rect key="frame" x="246" y="87" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <segue destination="E9X-Et-E78" kind="show" identifier="jumpToMain" id="5XP-W7-Wdm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cjQ-HV-aKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-444" y="1047"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="2X4-ZY-fu8">
             <objects>
@@ -1080,7 +1053,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agu-L4-f6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="349" y="1022"/>
+            <point key="canvasLocation" x="349" y="1094"/>
         </scene>
     </scenes>
     <resources>
