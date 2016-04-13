@@ -10,55 +10,28 @@ import UIKit
 
 class StoryPickViewController: UIViewController {
 
-    @IBOutlet weak var happyStoryButton: UIButton!
-    @IBOutlet weak var happyStoryImage: UIImageView!
+  @IBOutlet weak var happyStoryButton: UIButton!
+  @IBOutlet weak var happyStoryImageView: UIImageView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "StoryMap")!)
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        happyStoryButton.setTitle("", forState: .Normal)
-    }
+    navigationController?.setNavigationBarHidden(true, animated: false)
+    happyStoryButton.setTitle("", forState: .Normal)
+  }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-        
-    }
-    
-    @IBAction func happyStoryPressed(sender: AnyObject) {
-        NSTimer.scheduledTimerWithTimeInterval(0.33, target: self, selector: #selector(switchHappyFrame2), userInfo: nil, repeats: false)
-    }
-    
-    func switchHappyFrame2(time: AnyObject) {
-        happyStoryImage.image = UIImage(named: "StoryMap1Effect2")
-        NSTimer.scheduledTimerWithTimeInterval(0.33, target: self, selector: #selector(switchHappyFrame3), userInfo: nil, repeats: false)
-    }
-    
-    func switchHappyFrame3(time: AnyObject) {
-        happyStoryImage.image = UIImage(named: "StoryMap1Effect3")
-        NSTimer.scheduledTimerWithTimeInterval(0.33, target: self, selector: #selector(switchHappyFrame1), userInfo: nil, repeats: false)
-    }
-    
-    func switchHappyFrame1(time: AnyObject) {
-        happyStoryImage.image = UIImage(named: "StoryMap1Effect1")
-        NSTimer.scheduledTimerWithTimeInterval(0.33, target: self, selector: #selector(jumpToFaceChoose), userInfo: nil, repeats: false)
-    }
-    
-    func jumpToFaceChoose(time: AnyObject) {
-        performSegueWithIdentifier("jumpToFaceChoose", sender: self)
-    }
+//MARK: User Interaction
+extension StoryPickViewController {
+  @IBAction func happyStoryPressed(sender: AnyObject) {
+    happyStoryImageView.animationImages = [UIImage.init(named: "StoryMap1Effect2")!, UIImage.init(named: "StoryMap1Effect3")!, UIImage.init(named: "StoryMap1Effect1")!]
+    happyStoryImageView.animationDuration = 1
+    happyStoryImageView.animationRepeatCount = 1
+    happyStoryImageView.startAnimating()
+    NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(finishedAnimating), userInfo: nil, repeats: false)
+  }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  func finishedAnimating(time: AnyObject) {
+    performSegueWithIdentifier("StoryPickToFaceChooseSegue", sender: self)
+  }
 }

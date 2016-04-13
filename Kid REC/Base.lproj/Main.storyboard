@@ -18,32 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoryMap1Effect1" translatesAutoresizingMaskIntoConstraints="NO" id="8be-bs-Y1D">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="600"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="c1t-va-y9L"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoryMap" translatesAutoresizingMaskIntoConstraints="NO" id="Uoi-su-3uf" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAh-Iq-GYI">
                                 <rect key="frame" x="41" y="111" width="146" height="104"/>
                                 <state key="normal" title="Chuyện Vui"/>
                                 <connections>
-                                    <action selector="happyStoryPressed:" destination="Wpw-DP-WuJ" eventType="touchUpInside" id="xeb-0M-jMx"/>
+                                    <action selector="happyStoryPressed:" destination="Wpw-DP-WuJ" eventType="touchUpInside" id="PwU-z3-IcO"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoryMap1Effect1" translatesAutoresizingMaskIntoConstraints="NO" id="8be-bs-Y1D">
+                                <rect key="frame" x="0.0" y="20" width="240" height="580"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="c1t-va-y9L"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oNZ-O6-L0g" firstAttribute="top" secondItem="Uoi-su-3uf" secondAttribute="bottom" id="2NO-Cw-aUK"/>
+                            <constraint firstItem="Uoi-su-3uf" firstAttribute="top" secondItem="f9k-C0-L78" secondAttribute="bottom" id="GmU-Hq-2Ct"/>
                             <constraint firstItem="oNZ-O6-L0g" firstAttribute="top" secondItem="8be-bs-Y1D" secondAttribute="bottom" id="PJZ-VM-yEW"/>
-                            <constraint firstItem="8be-bs-Y1D" firstAttribute="top" secondItem="Xz2-FV-CeH" secondAttribute="topMargin" id="VLK-Pq-ds3"/>
-                            <constraint firstItem="8be-bs-Y1D" firstAttribute="leading" secondItem="Xz2-FV-CeH" secondAttribute="leadingMargin" constant="-20" id="naP-M3-Gpz"/>
+                            <constraint firstAttribute="trailing" secondItem="Uoi-su-3uf" secondAttribute="trailing" id="TDk-S4-nBF"/>
+                            <constraint firstItem="Uoi-su-3uf" firstAttribute="leading" secondItem="Xz2-FV-CeH" secondAttribute="leading" id="YD0-lA-kVR"/>
+                            <constraint firstItem="8be-bs-Y1D" firstAttribute="leading" secondItem="Xz2-FV-CeH" secondAttribute="leading" id="naP-M3-Gpz"/>
+                            <constraint firstItem="8be-bs-Y1D" firstAttribute="top" secondItem="f9k-C0-L78" secondAttribute="bottom" id="w2L-D9-eZm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chọn câu chuyện" id="rZM-6f-RoW"/>
                     <connections>
                         <outlet property="happyStoryButton" destination="BAh-Iq-GYI" id="hSZ-dt-d6q"/>
-                        <outlet property="happyStoryImage" destination="8be-bs-Y1D" id="iJI-PD-4ph"/>
-                        <segue destination="zaG-ym-SGD" kind="show" identifier="jumpToFaceChoose" id="hf4-LX-CxP"/>
+                        <outlet property="happyStoryImageView" destination="8be-bs-Y1D" id="DJR-uQ-0vh"/>
+                        <segue destination="zaG-ym-SGD" kind="show" identifier="StoryPickToFaceChooseSegue" id="hf4-LX-CxP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yd4-QE-WCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -62,6 +69,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FaceChooseBackground" translatesAutoresizingMaskIntoConstraints="NO" id="9Cw-5b-Il4">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWk-x1-n2I">
                                 <rect key="frame" x="55" y="90" width="200" height="200"/>
                                 <constraints>
@@ -117,10 +127,14 @@
                             <constraint firstItem="ziT-KG-Zie" firstAttribute="top" secondItem="4ph-Re-vDk" secondAttribute="bottom" constant="-40" id="Cjq-ui-k5t"/>
                             <constraint firstItem="FWk-x1-n2I" firstAttribute="leading" secondItem="fEk-Xb-GK7" secondAttribute="leadingMargin" constant="35" id="K8y-O1-393"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4ph-Re-vDk" secondAttribute="trailing" constant="35" id="XZj-4L-eH5"/>
+                            <constraint firstItem="9Cw-5b-Il4" firstAttribute="leading" secondItem="fEk-Xb-GK7" secondAttribute="leading" id="c0e-ET-5WV"/>
+                            <constraint firstAttribute="trailing" secondItem="9Cw-5b-Il4" secondAttribute="trailing" id="coF-rZ-Nka"/>
+                            <constraint firstItem="9Cw-5b-Il4" firstAttribute="top" secondItem="nYG-RW-y0L" secondAttribute="bottom" id="dkF-VI-0Se"/>
                             <constraint firstItem="20n-S8-HEF" firstAttribute="centerX" secondItem="FWk-x1-n2I" secondAttribute="centerX" id="hne-g8-Ukf"/>
                             <constraint firstItem="FWk-x1-n2I" firstAttribute="top" secondItem="nYG-RW-y0L" secondAttribute="bottom" constant="70" id="oeq-bC-JTc"/>
                             <constraint firstItem="ziT-KG-Zie" firstAttribute="centerX" secondItem="4ph-Re-vDk" secondAttribute="centerX" id="paM-EJ-Qee"/>
                             <constraint firstItem="4ph-Re-vDk" firstAttribute="top" secondItem="nYG-RW-y0L" secondAttribute="bottom" constant="70" id="pny-Hn-Zmd"/>
+                            <constraint firstItem="RNb-JB-eSw" firstAttribute="top" secondItem="9Cw-5b-Il4" secondAttribute="bottom" id="vOi-LT-Yjr"/>
                             <constraint firstItem="20n-S8-HEF" firstAttribute="top" secondItem="FWk-x1-n2I" secondAttribute="bottom" constant="-40" id="zps-yM-4fC"/>
                         </constraints>
                     </view>
@@ -1068,6 +1082,7 @@
         <image name="EyesBrown1" width="209" height="22"/>
         <image name="EyesBrown2" width="178" height="24"/>
         <image name="FaceCaptureBackground" width="1136" height="640"/>
+        <image name="FaceChooseBackground" width="1136" height="640"/>
         <image name="FinishBackground" width="1136" height="640"/>
         <image name="Home" width="325" height="303"/>
         <image name="Mouth1" width="94" height="53"/>
@@ -1078,6 +1093,7 @@
         <image name="RightFace" width="345" height="95"/>
         <image name="Start" width="383" height="106"/>
         <image name="Stop" width="163" height="159"/>
+        <image name="StoryMap" width="1136" height="640"/>
         <image name="StoryMap1Effect1" width="453" height="640"/>
         <image name="Undo" width="136" height="139"/>
         <image name="VideoPause" width="117" height="123"/>
